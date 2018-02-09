@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -16,5 +16,18 @@
   <li>
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
+</ul> -->
+
+<h1>Quizzes</h1>
+
+<ul>
+  <li *ngFor="let q of quizzes">{{ q.name }} <button *ngIf="q.showDelete" (click)="deleteQuiz(q)">Delete</button></li>
 </ul>
 
+<button (click)="addFunnyQuiz()">Add Funny Quiz</button>
+<br />
+<br />
+<div>
+  <input [(ngModel)]="newQuizName" type="text" />
+  <button (click)="addQuiz()">Add</button>
+</div>
