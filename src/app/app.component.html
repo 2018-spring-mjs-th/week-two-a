@@ -31,3 +31,12 @@
   <input [(ngModel)]="newQuizName" type="text" />
   <button (click)="addQuiz()">Add</button>
 </div>
+<br />
+<br />
+<div>
+  <input type="text" [(ngModel)]="number1" />
+  +
+  <input type="text" [(ngModel)]="number2" />
+  <button (click)="add()">=</button>
+  {{answer}}
+</div>
