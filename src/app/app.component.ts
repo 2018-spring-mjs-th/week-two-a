@@ -13,16 +13,20 @@ export class AppComponent {
   //   , "Quiz 2"
   // ];
 
-  quizzes = [
-    {
-      name: "Quiz 1"
-      , showDelete: false
-    }
-    , {
-      name: "Quiz 2"
-      , showDelete: false
-    }
-  ];
+  ngOnInit() {
+
+    this.quizzes = [{
+        name: "Quiz 1"
+        , showDelete: false
+      }
+      , {
+        name: "Quiz 3"
+        , showDelete: false
+      }
+    ];
+  }
+
+  quizzes = [];
 
   public addFunnyQuiz() {
     //this.quizzes.push("Funny Quiz");
@@ -41,8 +45,8 @@ export class AppComponent {
   }
 
   // Our #week-03 "calculator"...
-  number1:number = 0;
-  number2:number = 0;
+  number1:number = 1;
+  number2:number = 10;
   answer:number = 0;
   add = () => {
     window.alert('here');
