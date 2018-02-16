@@ -18,7 +18,7 @@
   </li>
 </ul> -->
 
-<h1>Quizzes</h1>
+<h1>Quizzes123</h1>
 
 <ul>
   <li *ngFor="let q of quizzes">{{ q.name }} <button *ngIf="q.showDelete" (click)="deleteQuiz(q)">Delete</button></li>
@@ -39,4 +39,8 @@
   <input type="text" [(ngModel)]="number2" />
   <button (click)="add()">=</button>
   {{answer}}
+
+  <br />
+  <br />
+  {{ number2 }}
 </div>
