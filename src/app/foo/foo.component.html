@@ -1,3 +1,16 @@
-<p>
-  foo works!
-</p>
+  <div style='margin: 20px; border: 1px black solid; padding: 20px;'>
+    <div *ngFor='let t of toppings'>
+      <label>
+          <input type="checkbox" [(ngModel)]='t.checked' />
+          {{t.name}}
+      </label>
+    </div>  
+    <br />
+    <br />
+    <div>
+      <button (click)='clearAll()'>Clear All</button>
+      <button (click)='updateDisplayedToppings()'>Update Chosen Toppings</button>
+      Chosen toppings: {{ chosenToppings }}
+    </div>
+  </div>
+  
