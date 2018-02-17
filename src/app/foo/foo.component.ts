@@ -3,7 +3,6 @@ import { SvcService } from '../svc.service';
 
 @Component({
   selector: 'app-foo',
-  //inputs: ['SvcService'],
   templateUrl: './foo.component.html',
   styleUrls: ['./foo.component.css']
 })
@@ -21,6 +20,7 @@ export class FooComponent implements OnInit {
   
   clearAll() {
     this.toppings = this.toppings.map(x => ({ ...x, checked: false }));    
+    this.updateDisplayedToppings();
   }
 
   updateDisplayedToppings() {
