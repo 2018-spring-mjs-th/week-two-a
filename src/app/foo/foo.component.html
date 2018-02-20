@@ -8,7 +8,8 @@
     <br />
     <br />
     <div>
-      <button (click)='clearAll()'>Clear All</button>
+      <!-- <button (click)='clearAll()'>Clear All</button> -->
+      <input type="checkbox" [(ngModel)]='toggleAllState' /> All | 
       <button (click)='updateDisplayedToppings()'>Update Chosen Toppings</button>
       Chosen toppings: {{ chosenToppings }}
     </div>

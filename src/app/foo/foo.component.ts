@@ -18,6 +18,12 @@ export class FooComponent implements OnInit {
 
   chosenToppings = "";
   
+  set toggleAllState(newState) {
+    //window.alert('here');
+
+    this.toppings.forEach(x => x.checked = newState);
+  }
+
   clearAll() {
     this.toppings = this.toppings.map(x => ({ ...x, checked: false }));    
     this.updateDisplayedToppings();
