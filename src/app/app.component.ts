@@ -52,7 +52,12 @@ export class AppComponent {
   newQuizName = "";
 
   public addQuiz() {
-    this.quizzes.push({ name: this.newQuizName, showDelete: true, questionTypeSummary: "foo" });
+    let summary = this.questionTypeChoices.availableQuestionTypes
+      .filter(x => x.checked)
+      .map(x => x.name)
+      .join(', ');
+
+    this.quizzes.push({ name: this.newQuizName, showDelete: true, questionTypeSummary: summary });
     this.newQuizName = "";
   }
 
