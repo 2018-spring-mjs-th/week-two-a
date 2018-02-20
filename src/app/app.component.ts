@@ -1,4 +1,4 @@
-import { Component, ContentChild, ViewChild } from '@angular/core';
+import { Component, ContentChild, ViewChild, ViewChildren } from '@angular/core';
 import { FooComponent } from './foo/foo.component';
 
 @Component({
@@ -29,12 +29,12 @@ export class AppComponent {
 
   quizzes = [];
 
-  @ViewChild(FooComponent)
-  foo: FooComponent;
+  @ViewChildren(FooComponent)
+  foo;
 
   public addFunnyQuiz() {
     console.log(this.foo);
-    console.log("I like " + this.foo.toppings
+    console.log("I like " + this.foo.toArray()[1].toppings
       .filter(x => x.checked)
       .map(x => x.name)
       .join(','));
