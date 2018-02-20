@@ -2,6 +2,12 @@ import { Component, ContentChild, ViewChild } from '@angular/core';
 import { FooComponent } from './foo/foo.component';
 import { ChooseQuestionTypesComponent } from './choose-question-types/choose-question-types.component';
 
+interface quiz {
+  name: string;
+  showDelete: boolean;
+  questionTypeSummary: string;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -30,7 +36,8 @@ export class AppComponent {
     ];
   }
 
-  quizzes = [];
+  // Type annotate the quizzes array ! ! !  
+  quizzes: quiz[] = [];
 
   @ViewChild(FooComponent)
   foo: FooComponent;
@@ -46,7 +53,7 @@ export class AppComponent {
       .join(','));
 
     //this.quizzes.push("Funny Quiz");
-    this.quizzes.push({ name: "Funny Quiz", showDelete: false });
+    this.quizzes.push({ name: "Funny Quiz", showDelete: false, questionTypeSummary: '' });
   }
 
   newQuizName = "";
