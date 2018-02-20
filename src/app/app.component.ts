@@ -1,5 +1,6 @@
 import { Component, ContentChild, ViewChild } from '@angular/core';
 import { FooComponent } from './foo/foo.component';
+import { ChooseQuestionTypesComponent } from './choose-question-types/choose-question-types.component';
 
 @Component({
   selector: 'app-root',
@@ -19,10 +20,12 @@ export class AppComponent {
     this.quizzes = [{
         name: "Quiz 1"
         , showDelete: false
+        , questionTypeSummary: ""
       }
       , {
         name: "Quiz 3"
         , showDelete: false
+        , questionTypeSummary: ""
       }
     ];
   }
@@ -31,6 +34,9 @@ export class AppComponent {
 
   @ViewChild(FooComponent)
   foo: FooComponent;
+
+  @ViewChild(ChooseQuestionTypesComponent)
+  questionTypeChoices: ChooseQuestionTypesComponent;
 
   public addFunnyQuiz() {
     console.log(this.foo);
@@ -46,7 +52,7 @@ export class AppComponent {
   newQuizName = "";
 
   public addQuiz() {
-    this.quizzes.push({ name: this.newQuizName, showDelete: true });
+    this.quizzes.push({ name: this.newQuizName, showDelete: true, questionTypeSummary: "foo" });
     this.newQuizName = "";
   }
 
