@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ContentChild, ViewChild } from '@angular/core';
+import { FooComponent } from './foo/foo.component';
 
 @Component({
   selector: 'app-root',
@@ -28,7 +29,16 @@ export class AppComponent {
 
   quizzes = [];
 
+  @ViewChild(FooComponent)
+  foo: FooComponent;
+
   public addFunnyQuiz() {
+    console.log(this.foo);
+    console.log("I like " + this.foo.toppings
+      .filter(x => x.checked)
+      .map(x => x.name)
+      .join(','));
+
     //this.quizzes.push("Funny Quiz");
     this.quizzes.push({ name: "Funny Quiz", showDelete: false });
   }
