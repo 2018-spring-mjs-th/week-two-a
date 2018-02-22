@@ -5,4 +5,10 @@ export class PizzaToppingsService {
 
   constructor() { }
 
+  public getAvailablePizzaToppings() {
+    return [
+      "Cheese"
+      , "Sausage"
+    ];
+  }
 }
