@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 
 import { FormsModule } from '@angular/forms';
 
+import { QuestionTypesService } from './question-types.service';
+import { PizzaToppingsService } from './pizza-toppings.service';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { FormsModule } from '@angular/forms';
     BrowserModule
     , FormsModule
   ],
-  providers: [],
+  providers: [
+    QuestionTypesService
+    , PizzaToppingsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
