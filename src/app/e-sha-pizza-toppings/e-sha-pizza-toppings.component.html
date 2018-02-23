@@ -1,14 +1,15 @@
-<h1>ESha Pizza Toppings</h1>
-<div *ngFor='let t of toppings'>
-  <label>
-    {{ t.name }}
-    <input type="checkbox" [(ngModel)]='t.checked' />
-    
-  </label>
-
+<div style="border: 2px solid black; padding: 1rem;">
+    <h1>ESha Pizza Toppings</h1>
+  <div *ngFor='let t of toppings'>
+    <label>
+      {{ t.name }}
+      <input type="checkbox" [(ngModel)]='t.checked' />
+    </label> 
   </div>
+  <br />
   <button (click)="checkAllToppings()">All</button>
   <button (click)="uncheckAllToppings()">None</button>
   <button (click)="addPizzaTopping()">Update Chosen Toppings</button><span *ngIf="chosenToppings.length > 0 ">{{ chosenToppings }}</span>
+</div>
 
   
