@@ -3,6 +3,9 @@
     <li *ngFor="let pt of skPizzaToppings"><input type='checkbox' [(ngModel)]='pt.checked' />{{ pt.name }}</li>
   </ul>
   <button (click)="allSkToppings()">All</button>
-  <button>None</button>
-  <button>Describe</button>
+  <button (click)="noSkToppings()">None</button>
+  <button (click)="describePizza()">Describe</button>
+  <span>
+    {{ pizzaDescription }}
+  </span>
 </div>

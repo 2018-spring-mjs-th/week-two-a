@@ -16,6 +16,7 @@ export class SkulasPizzaToppingComponent implements OnInit {
   constructor(private skPizzaToppingService: PizzaToppingsService) { }
 
   public skPizzaToppings: skPizzaTopping[];
+  public pizzaDescription: string;
 
   ngOnInit() {
     this.skPizzaToppings = this.skPizzaToppingService.getAvailableSkPizzaToppings()
@@ -24,6 +25,18 @@ export class SkulasPizzaToppingComponent implements OnInit {
 
   // skulasPizzaToppings
   allSkToppings = () => {
-    window.alert('asdfsadf');
+    this.skPizzaToppings.forEach(p => p.checked = true);
+  }
+
+  noSkToppings = () => {
+    this.skPizzaToppings.forEach(p => p.checked = false);
+  }
+
+  describePizza = () => {
+    if (this.skPizzaToppings.filter(p => p.checked).length > 0) {
+      this.pizzaDescription = "I love " + this.skPizzaToppings.filter(p => p.checked).map(p => p.name).join(", ");
+    } else {
+      this.pizzaDescription = "I love plain cheese.";
+    }
   }
 }
