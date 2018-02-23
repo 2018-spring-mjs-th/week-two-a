@@ -8,7 +8,8 @@ export class QuestionTypesService {
   public getQuestionTypes() {
     return [
       "Multiple Choice"
-      , "True/False"
+      , "True/False",
+      "Short Answer"
     ];
   }
 }
