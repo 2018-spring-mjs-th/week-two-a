@@ -22,4 +22,12 @@ export class RbruinsmaPizzaToppingsComponent implements OnInit {
     .map(x => ({ checked: false, name: x }));
   }
 
+  public selectAllToppings() {
+  
+  }
+  
+  public unselectAllToppings() {
+    
+  }
+  
 }
