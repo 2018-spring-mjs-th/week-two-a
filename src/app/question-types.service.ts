@@ -9,6 +9,7 @@ export class QuestionTypesService {
     return [
       "Multiple Choice"
       , "True/False"
+      , "Essay"
     ];
   }
 }
