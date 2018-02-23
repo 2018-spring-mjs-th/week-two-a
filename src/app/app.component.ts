@@ -8,9 +8,9 @@ interface quizDisplay {
   questionTypeSummary: string;
 }
 
-interface toppingDisplay {
-  toppingName: string
-}
+// interface toppingDisplay {
+//   toppingName: string[]
+// }
 
 @Component({
   selector: 'app-root',
@@ -83,18 +83,18 @@ export class AppComponent {
     this.answer = Number(this.number1) + Number(this.number2)
   };
 
-  // Pizza Toppings
+  // // Pizza Toppings
 
-  chosenToppings: toppingDisplay[] = [];
+  // chosenToppings: toppingDisplay[] = [];
 
-  toppingName = "";
+  // toppingName = "";
 
-  public addPizzaTopping() {
-    let y = this.PizzaToppingsSubComponent.toppings
-      .filter(x => x.checked)
-      .map(x=> x.name)
-      .join(', ');
+  // public addPizzaTopping() {
+  //   let y = this.PizzaToppingsSubComponent.toppings
+  //     .filter(x => x.checked)
+  //     .map(x=> x.name)
+  //     .join(', ');
 
-      this.chosenToppings.push({ toppingName: y })
-  }
+  //     this.chosenToppings.push({ toppingName: EShaPizzaToppingsComponent.toppings })
+  // }
 }

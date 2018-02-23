@@ -6,6 +6,10 @@ interface topping {
   checked: boolean;
 }
 
+interface toppingDisplay {
+  toppingName: string[]
+}
+
 @Component({
   selector: 'e-sha-pizza-toppings',
   templateUrl: './e-sha-pizza-toppings.component.html',
@@ -20,5 +24,32 @@ export class EShaPizzaToppingsComponent implements OnInit {
     this.toppings = this.pizzaService.getAvailablePizzaToppings()
       .map(x => ({ name: x, checked: false }));
   }
+
+    // Pizza Toppings
+
+
+    chosenToppings: string = "";
+
+
+  
+    public addPizzaTopping() {
+      this.chosenToppings = "I love "  + this.toppings
+        .filter(x => x.checked)
+        .map(x=> x.name)
+        .join(', ')
+        + "!!";
+
+    }
+
+    uncheckAllToppings() {
+      this.toppings.forEach(t => t.checked = false);
+      this.chosenToppings = "";
+    }
+
+    checkAllToppings() {
+      this.toppings.forEach(t => t.checked = true);
+      this.addPizzaTopping();
+    }
+
 
 }

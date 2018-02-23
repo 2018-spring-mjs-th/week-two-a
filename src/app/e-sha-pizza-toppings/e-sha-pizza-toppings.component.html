@@ -5,4 +5,10 @@
     <input type="checkbox" [(ngModel)]='t.checked' />
     
   </label>
-</div>
+
+  </div>
+  <button (click)="checkAllToppings()">All</button>
+  <button (click)="uncheckAllToppings()">None</button>
+  <button (click)="addPizzaTopping()">Update Chosen Toppings</button><span *ngIf="chosenToppings.length > 0 ">{{ chosenToppings }}</span>
+
+  
