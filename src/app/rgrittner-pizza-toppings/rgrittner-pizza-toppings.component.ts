@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { PizzaToppingsService } from '../pizza-toppings.service';
+
+interface toppingType {
+  topping: string;
+  checked: boolean;
+}
 
 @Component({
   selector: 'rgrittner-pizza-toppings',
@@ -7,9 +13,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RgrittnerPizzaToppingsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private pizzaToppings: PizzaToppingsService) { }
+
+  public toppingType: toppingType[];
 
   ngOnInit() {
+    this.toppingType = this.pizzaToppings.getAvailablePizzaToppings()
+      .map(x => ({topping: x, checked: false}));
   }
 
 }
