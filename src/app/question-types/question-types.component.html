@@ -1,3 +1,6 @@
-<span>
-  question-types works!
+<span *ngFor='let qt of questionTypes'>
+  <label>
+    <input type="checkbox" [(ngModel)]='qt.checked' />
+    {{ qt.name }}
+  </label>
 </span>
