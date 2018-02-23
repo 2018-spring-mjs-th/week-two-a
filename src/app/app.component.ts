@@ -1,10 +1,15 @@
 import { Component, ViewChild } from '@angular/core';
 import { QuestionTypesComponent } from './question-types/question-types.component';
+import { EShaPizzaToppingsComponent } from './e-sha-pizza-toppings/e-sha-pizza-toppings.component';
 
 interface quizDisplay {
   name: string;
   showDelete: boolean;
   questionTypeSummary: string;
+}
+
+interface toppingDisplay {
+  toppingName: string
 }
 
 @Component({
@@ -16,6 +21,9 @@ export class AppComponent {
 
   @ViewChild(QuestionTypesComponent)
   public questionTypeSubComponent: QuestionTypesComponent;
+ 
+  @ViewChild(EShaPizzaToppingsComponent)
+  public PizzaToppingsSubComponent: EShaPizzaToppingsComponent; 
 
   title = 'week-two-a';
 
@@ -74,4 +82,19 @@ export class AppComponent {
     window.alert('here');
     this.answer = Number(this.number1) + Number(this.number2)
   };
+
+  // Pizza Toppings
+
+  chosenToppings: toppingDisplay[] = [];
+
+  toppingName = "";
+
+  public addPizzaTopping() {
+    let y = this.PizzaToppingsSubComponent.toppings
+      .filter(x => x.checked)
+      .map(x=> x.name)
+      .join(', ');
+
+      this.chosenToppings.push({ toppingName: y })
+  }
 }

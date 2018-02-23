@@ -1,3 +1,8 @@
-<p>
-  e-sha-pizza-toppings works!
-</p>
+<h1>ESha Pizza Toppings</h1>
+<div *ngFor='let t of toppings'>
+  <label>
+    {{ t.name }}
+    <input type="checkbox" [(ngModel)]='t.checked' />
+    
+  </label>
+</div>
