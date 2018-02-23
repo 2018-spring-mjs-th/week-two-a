@@ -22,4 +22,8 @@ export class SkulasPizzaToppingComponent implements OnInit {
       .map(p => ({name: p, checked: false}));
   }
 
+  // skulasPizzaToppings
+  allSkToppings = () => {
+    window.alert('asdfsadf');
+  }
 }
