@@ -15,7 +15,11 @@ export class RbruinsmaPizzaToppingsComponent implements OnInit {
 
   constructor(private ptSvc: PizzaToppingsService) { }
 
+  public toppingTypes: toppingType[];
+
   ngOnInit() {
+    this.toppingTypes = this.ptSvc.getAvailablePizzaToppings()
+    .map(x => ({ checked: false, name: x }));
   }
 
 }
