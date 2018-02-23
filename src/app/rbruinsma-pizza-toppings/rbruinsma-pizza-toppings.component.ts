@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { PizzaToppingsService } from '../pizza-toppings.service';
+
+interface toppingType {
+  checked: boolean;
+  name: string;
+}
 
 @Component({
   selector: 'rbruinsma-toppings',
@@ -7,7 +13,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RbruinsmaPizzaToppingsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ptSvc: PizzaToppingsService) { }
 
   ngOnInit() {
   }
