@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { PizzaToppingsService } from '../pizza-toppings.service';
 
 interface toppingType {
@@ -13,6 +13,7 @@ interface toppingType {
 })
 export class RgrittnerPizzaToppingsComponent implements OnInit {
 
+  
   constructor(private pizzaToppings: PizzaToppingsService) { }
 
   public toppingType: toppingType[];
@@ -20,6 +21,12 @@ export class RgrittnerPizzaToppingsComponent implements OnInit {
   ngOnInit() {
     this.toppingType = this.pizzaToppings.getAvailablePizzaToppings()
       .map(x => ({topping: x, checked: false}));
+  }
+
+  
+  public checkAll() {
+    this.toppingType = this.pizzaToppings.getAvailablePizzaToppings()
+      .map(x => ({topping: x, checked: true}));
   }
 
 }
