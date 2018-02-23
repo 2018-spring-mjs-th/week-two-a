@@ -29,4 +29,9 @@ export class RgrittnerPizzaToppingsComponent implements OnInit {
       .map(x => ({topping: x, checked: true}));
   }
 
+  public uncheckAll() {
+    this.toppingType = this.pizzaToppings.getAvailablePizzaToppings()
+      .map(x => ({topping: x, checked: false}));
+  }
+
 }
