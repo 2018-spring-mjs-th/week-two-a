@@ -10,6 +10,7 @@ export class QuestionTypesService {
       "Multiple Choice"
       , "True/False"
       , "Essay"
+      , "Short Answer"
     ];
   }
 }
