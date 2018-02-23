@@ -7,7 +7,7 @@ export class PizzaToppingsService {
 
   public getAvailablePizzaToppings() {
     return [
-      "Cheese"
+      "Extra Cheese"
       , "Sausage"
     ];
   }
