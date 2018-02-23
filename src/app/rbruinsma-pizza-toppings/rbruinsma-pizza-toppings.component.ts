@@ -23,11 +23,14 @@ export class RbruinsmaPizzaToppingsComponent implements OnInit {
   }
 
   public selectAllToppings() {
-  
+    this.toppingTypes = this.ptSvc.getAvailablePizzaToppings()
+    .map(x => ({ checked: true, name: x }));
   }
   
   public unselectAllToppings() {
-    
+    this.toppingTypes = this.ptSvc.getAvailablePizzaToppings()
+    .map(x => ({ checked: false, name: x }));
   }
+
   
 }
