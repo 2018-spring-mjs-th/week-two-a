@@ -8,13 +8,11 @@ import { FormsModule } from '@angular/forms';
 
 import { QuestionTypesService } from './question-types.service';
 import { PizzaToppingsService } from './pizza-toppings.service';
-import { QuestionTypesComponent } from './question-types/question-types.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    QuestionTypesComponent
+    AppComponent
   ],
   imports: [
     BrowserModule
