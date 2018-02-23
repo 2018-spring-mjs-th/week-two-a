@@ -34,7 +34,7 @@ export class SkulasPizzaToppingComponent implements OnInit {
 
   describePizza = () => {
     if (this.skPizzaToppings.filter(p => p.checked).length > 0) {
-      this.pizzaDescription = "I love " + this.skPizzaToppings.filter(p => p.checked).map(p => p.name).join(", ");
+      this.pizzaDescription = "I love " + this.skPizzaToppings.filter(p => p.checked).map(p => p.name).join(", ") + ".";
     } else {
       this.pizzaDescription = "I love plain cheese.";
     }
