@@ -13,16 +13,20 @@ export class AppComponent {
   //   , "Quiz 2"
   // ];
 
-  quizzes = [
-    {
+  ngOnInit() {
+    this.quizzes = [{
       name: "Quiz 1"
       , showDelete: false
     }
     , {
-      name: "Quiz 2"
+      name: "Quiz 3"
       , showDelete: false
     }
-  ];
+
+  ]
+  };
+
+  quizzes = [];
 
   public addFunnyQuiz() {
     //this.quizzes.push("Funny Quiz");
