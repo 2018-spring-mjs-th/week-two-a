@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QuestionTypesService } from '../question-types.service';
 
 @Component({
   selector: 'question-types',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionTypesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private qtService: QuestionTypesService) { }
+
+  public questionTypes: string[];
+
 
   ngOnInit() {
+    this.questionTypes = this.qtService.getQuestionTypes();
   }
 
 }
