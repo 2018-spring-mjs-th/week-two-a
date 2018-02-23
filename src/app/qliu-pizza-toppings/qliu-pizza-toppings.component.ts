@@ -27,4 +27,27 @@ export class QliuPizzaToppingsComponent implements OnInit {
 
   }
 
+  public selectAll() {
+    this.toppingTypes.forEach(x => x.checked = true);
+
+  }
+
+  public selectNone() {
+
+    this.toppingTypes.forEach(x => x.checked = false);
+
+  }
+
+
+  public myToppings: string = "";
+
+  public refresh() {
+
+  this.myToppings = this.toppingTypes
+      .filter(x => x.checked)
+      .map(x => x.name)
+      .join(', ');
+
+  }
+
 }

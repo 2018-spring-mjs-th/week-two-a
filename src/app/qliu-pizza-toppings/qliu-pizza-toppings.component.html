@@ -6,5 +6,12 @@
       <input type='checkbox' [(ngModel)]='pt.checked' />
       {{ pt.name }}
     </label>
+
+
 </span>
   
+<br/><br/>
+
+<button type="button" (click)="selectAll()">All</button>
+<button type="button" (click)="selectNone()">None</button>
+<button type="button" (click)="refresh()">Refresh</button><span *ngIf='myToppings.length > 0'> I love ({{ myToppings }}) !!!</span>
