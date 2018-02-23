@@ -1,3 +1,11 @@
-<p>
-  rbruinsma-pizza-toppings works!
-</p>
+<div id="toppingsBox">
+  <h2> rbruinsma pizza toppings </h2>
+
+  <span *ngFor="let tt of toppingTypes"><p>
+    <label>
+        <input type='checkbox' [(ngModel)]='tt.checked' />
+        {{ tt.name }}
+    </label></p>
+  </span>
+</div>
+
