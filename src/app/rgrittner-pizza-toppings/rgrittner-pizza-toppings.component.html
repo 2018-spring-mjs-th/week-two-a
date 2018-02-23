@@ -1,3 +1,7 @@
-<p>
-  rgrittner-pizza-toppings works!
-</p>
+<span *ngFor= "let pizza of toppingType" >
+  <fieldset>
+      <legend>Renee's Pizza Joint</legend>
+      <input type="checkbox" [(ngModel)]="pizza.checked">
+  </fieldset>
+
+</span>
