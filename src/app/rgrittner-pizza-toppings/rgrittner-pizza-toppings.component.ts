@@ -4,6 +4,7 @@ import { PizzaToppingsService } from '../pizza-toppings.service';
 interface toppingType {
   topping: string;
   checked: boolean;
+  summary: string;
 }
 
 @Component({
@@ -20,18 +21,31 @@ export class RgrittnerPizzaToppingsComponent implements OnInit {
 
   ngOnInit() {
     this.toppingType = this.pizzaToppings.getAvailablePizzaToppings()
-      .map(x => ({topping: x, checked: false}));
+      .map(x => ({topping: x, checked: false, summary: ""}));
   }
 
   
   public checkAll() {
     this.toppingType = this.pizzaToppings.getAvailablePizzaToppings()
-      .map(x => ({topping: x, checked: true}));
+      .map(x => ({topping: x, checked: true, summary: x}));
   }
 
   public uncheckAll() {
     this.toppingType = this.pizzaToppings.getAvailablePizzaToppings()
-      .map(x => ({topping: x, checked: false}));
+      .map(x => ({topping: x, checked: false, summary: ""}));
+  }
+
+  public listOfToppings: string;
+
+  public whatWeLove(){
+    this.listOfToppings = this.toppingType
+      .filter(x => x.checked)
+      .map(x => x.topping)
+      .join(', ');
+      console.log(this.listOfToppings);
+
+    //this.toppingType.push({topping:})  ;
+     
   }
 
 }
