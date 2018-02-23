@@ -74,4 +74,9 @@ export class AppComponent {
     window.alert('here');
     this.answer = Number(this.number1) + Number(this.number2)
   };
+
+  // skulasPizzaToppings
+  allSkToppings = () => {
+    window.alert('asdfsadf');
+  }
 }
