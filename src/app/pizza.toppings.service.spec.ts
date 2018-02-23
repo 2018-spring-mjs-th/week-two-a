@@ -5,7 +5,7 @@ import { PizzaService } from './pizza-toppings.service';
 describe('PizzaService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: []
+      providers: [PizzaService]
     });
   });
 

@@ -18,7 +18,7 @@ export class QuestionTypesComponent implements OnInit {
   public questionTypes: quizType[];
 
   ngOnInit() {
-    this.questionTypes =this.qtService.getAvailableQuestionTypes()
+    this.questionTypes = this.qtService.getAvailableQuestionTypes()
     .map(x =>({name: x, checked:false}))
   }
 

@@ -13,6 +13,7 @@ interface quizDisplay {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
   @ViewChild(QuestionTypesComponent)
 
   public questionTypeSubComponent: QuestionTypesComponent
@@ -43,7 +44,7 @@ export class AppComponent {
 
   public addFunnyQuiz() {
     //this.quizzes.push("Funny Quiz");
-    this.quizzes.push({ name: "Funny Quiz", showDelete: false, questionTypeSummary: 'foo' });
+    this.quizzes.push({ name: "Funny Quiz", showDelete: false, questionTypeSummary: foo });
   }
 
   newQuizName = "";
@@ -52,9 +53,10 @@ export class AppComponent {
 
     let foo = this.questionTypeSubComponent.questionTypes
       .filter(x => x.checked)
+      .map(x => x.name)
       .join(', ');
-      
-    this.quizzes.push({ name: this.newQuizName, showDelete: true, questionTypeSummary: ('foo') });
+
+    this.quizzes.push({ name: this.newQuizName, showDelete: true, questionTypeSummary: foo });
     this.newQuizName = "";
   }
 
