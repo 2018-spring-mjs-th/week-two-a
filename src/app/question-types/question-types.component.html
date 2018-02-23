@@ -1,3 +1,3 @@
 <span *ngFor='let qt of questionTypes'>
-  {{ qt }}
+  <input type="checkbox" [(ngModel)]="qt.checked">{{ qt.name }}
 </span>
