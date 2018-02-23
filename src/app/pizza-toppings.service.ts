@@ -11,4 +11,12 @@ export class PizzaToppingsService {
       , "Sausage"
     ];
   }
+
+  public getAvailableSkPizzaToppings() {
+    return [
+      "Extra Cheese"
+      , "Sausage"
+      , "Pepperoni"
+    ];
+  }
 }
