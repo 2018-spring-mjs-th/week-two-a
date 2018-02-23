@@ -1,6 +1,9 @@
 <fieldset>
   <legend>Renee's Pizza Joint</legend>
     <span *ngFor= "let pizza of toppingType" >
-      <input type="checkbox" [(ngModel)]="pizza.checked" />
+      <label>
+        <input type="checkbox" [(ngModel)]="pizza.checked" />
+        {{ pizza.topping }}
+      </label>
     </span>
 </fieldset>
