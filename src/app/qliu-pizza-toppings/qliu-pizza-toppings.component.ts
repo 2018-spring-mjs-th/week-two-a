@@ -1,4 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { PizzaToppingsService } from '../pizza-toppings.service';
+
+
+interface toppingType {
+
+  name: string;
+  checked: boolean;
+
+}
 
 @Component({
   selector: 'app-qliu-pizza-toppings',
@@ -7,9 +16,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QliuPizzaToppingsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ptSvc: PizzaToppingsService) { }
+
+  public toppingTypes: toppingType[];
+
 
   ngOnInit() {
+    this.toppingTypes = this.ptSvc.getAvailablePizzaToppings()
+    .map(x => ({ name: x, checked: false }));
+
   }
 
 }
