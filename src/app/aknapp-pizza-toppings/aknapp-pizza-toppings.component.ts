@@ -4,7 +4,6 @@ import { PizzaToppingsService } from '../pizza-toppings.service';
 interface toppingType {
   name: string;
   checked: boolean;
-  iLoveStatement: string;
 }
 
 @Component({
@@ -20,25 +19,28 @@ export class AknappPizzaToppingsComponent implements OnInit {
 
   ngOnInit() {
     this.toppingTypes = this.ptService.getAvailablePizzaToppings()
-    .map(x => ({ name: x, checked: false, iLoveStatement: "" }));
+    .map(x => ({ name: x, checked: false }));
   }
 
   public checkAll() {
     this.toppingTypes = this.ptService.getAvailablePizzaToppings()
-    .map(x => ({ name: x, checked: true, iLoveStatement: "" }));
+    .map(x => ({ name: x, checked: true }));
   }
 
   public checkNone() {
     this.toppingTypes = this.ptService.getAvailablePizzaToppings()
-    .map(x => ({ name: x, checked: false, iLoveStatement: "" }));
+    .map(x => ({ name: x, checked: false }));
   }
 
   public refresh() {
-    this.toppingChoices = this.toppingTypes
+   
+    this.toppingChoices = "I love "
+    this.toppingChoices += this.toppingTypes
     .filter(x => x.checked)
     .map(x => x.name)
-    .join(', ');
-    
+    .join(', ');      
+    this.toppingChoices += "!!!"
+   
   }
 
 }
