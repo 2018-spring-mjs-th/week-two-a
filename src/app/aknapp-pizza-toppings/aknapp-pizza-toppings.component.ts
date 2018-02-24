@@ -14,6 +14,7 @@ interface toppingType {
 export class AknappPizzaToppingsComponent implements OnInit {
 
   constructor(private ptService: PizzaToppingsService) { }
+  
   public toppingTypes: toppingType[];
   public toppingChoices: string;
 
@@ -39,7 +40,7 @@ export class AknappPizzaToppingsComponent implements OnInit {
     .filter(x => x.checked)
     .map(x => x.name)
     .join(', ');      
-    this.toppingChoices += "!!!"
+    this.toppingChoices += "!!!" 
    
   }
 
