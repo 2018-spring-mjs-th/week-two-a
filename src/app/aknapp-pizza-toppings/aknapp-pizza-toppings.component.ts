@@ -15,12 +15,30 @@ interface toppingType {
 export class AknappPizzaToppingsComponent implements OnInit {
 
   constructor(private ptService: PizzaToppingsService) { }
-
-  public toppingTypes: quizType[];
+  public toppingTypes: toppingType[];
+  public toppingChoices: string;
 
   ngOnInit() {
     this.toppingTypes = this.ptService.getAvailablePizzaToppings()
-    .map(x => ({ name: x, checked: false, iLoveStatement: ""}));
+    .map(x => ({ name: x, checked: false, iLoveStatement: "" }));
+  }
+
+  public checkAll() {
+    this.toppingTypes = this.ptService.getAvailablePizzaToppings()
+    .map(x => ({ name: x, checked: true, iLoveStatement: "" }));
+  }
+
+  public checkNone() {
+    this.toppingTypes = this.ptService.getAvailablePizzaToppings()
+    .map(x => ({ name: x, checked: false, iLoveStatement: "" }));
+  }
+
+  public refresh() {
+    this.toppingChoices = this.toppingTypes
+    .filter(x => x.checked)
+    .map(x => x.name)
+    .join(', ');
+    
   }
 
 }
