@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { PizzaToppingsService } from "../pizza-toppings.service";
+
+interface pizzaTopping {
+    topping: string;
+    checked: boolean;
+}
 
 @Component({
   selector: 'app-j-stoff-component',
@@ -7,9 +13,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JStoffComponentComponent implements OnInit {
 
-  constructor() { }
+    public pizzaToppings: pizzaTopping[];
+    constructor(private pizzaSvc: PizzaToppingsService) { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }
