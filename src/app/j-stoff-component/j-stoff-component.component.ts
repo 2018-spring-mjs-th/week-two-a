@@ -14,15 +14,23 @@ interface pizzaTopping {
 export class JStoffComponentComponent implements OnInit {
 
     public pizzaToppings: pizzaTopping[];
+    public outputMessage: string;
     constructor(private pizzaSvc: PizzaToppingsService) { }
 
     ngOnInit() {
         this.pizzaToppings = this.pizzaSvc.getAvailablePizzaToppings()
             .map(x => ({topping: x, checked: false}));
+        this.outputMessage = "";
     }
 
     public orderPizza() {
-        
+        let message = "You ordered: ";
+        let selectedToppings = this.pizzaToppings.filter(x => x.checked)
+                                .map(x => x.topping)
+                                .join(", ");
+        message += selectedToppings;
+
+        this.outputMessage = message;
     }
 
 }
