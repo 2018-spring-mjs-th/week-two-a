@@ -17,6 +17,12 @@ export class JStoffComponentComponent implements OnInit {
     constructor(private pizzaSvc: PizzaToppingsService) { }
 
     ngOnInit() {
+        this.pizzaToppings = this.pizzaSvc.getAvailablePizzaToppings()
+            .map(x => ({topping: x, checked: false}));
+    }
+
+    public orderPizza() {
+        
     }
 
 }

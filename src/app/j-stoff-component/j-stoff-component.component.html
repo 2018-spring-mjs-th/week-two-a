@@ -1,15 +1,13 @@
 <h3>Jacob Stoffregen Pizza stuff, I guess</h3>
-<input type="checkbox" />
-<label>Extra Cheese</label><br/>
+<div>
+    <span *ngFor="let topping of pizzaToppings">
+        <label>
+            <input type="checkbox" [(ngModel)]="topping.checked"/>
+            {{ topping.topping }}
+        </label>
+        <br/>
+    </span>
+</div>
 
-<input type="checkbox" />
-<label>Sausage</label><br/>
-
-<input type="checkbox" />
-<label>Pepperoni</label><br/>
-
-<input type="checkbox" />
-<label>The Works</label><br/>
-
-<button>Order</button>
+<button (click)="orderPizza()">Order</button>
 <p>Message goes here</p>
