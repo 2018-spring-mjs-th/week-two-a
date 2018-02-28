@@ -16,6 +16,7 @@ export class RbruinsmaPizzaToppingsComponent implements OnInit {
   constructor(private ptSvc: PizzaToppingsService) { }
 
   public toppingTypes: toppingType[];
+  public toppingsMessage: string;
 
   ngOnInit() {
     this.toppingTypes = this.ptSvc.getAvailablePizzaToppings()
@@ -30,5 +31,17 @@ export class RbruinsmaPizzaToppingsComponent implements OnInit {
     this.toppingTypes.forEach(t => t.checked = false);
   }
 
+  public toppingsILove() {
+    var selectedToppings = this.toppingTypes.filter(x => x.checked)
+    var toppingNumber = selectedToppings.length;
+    if (toppingNumber == 0) {
+      this.toppingsMessage = "I don't want any toppings on my pie!!!";
+    } else {
+      this.toppingsMessage = "I like " + 
+      selectedToppings
+      .map(x => x.name)
+      .join(', ') + "!!!";
+    }
+  }
   
 }
