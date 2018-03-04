@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { FormsModule } from '@angular/forms';
+import { FooComponent } from './foo/foo.component';
 
 import { QuestionTypesService } from './question-types.service';
 import { PizzaToppingsService } from './pizza-toppings.service';
@@ -14,7 +15,8 @@ import { QuestionTypesComponent } from './question-types/question-types.componen
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionTypesComponent
+    QuestionTypesComponent,
+    FooComponent
   ],
   imports: [
     BrowserModule
