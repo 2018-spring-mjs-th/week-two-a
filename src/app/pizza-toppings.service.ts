@@ -5,7 +5,7 @@ export class PizzaService {
 
   constructor() { }
 
-  public addToppings() {
+/*   public addToppings() {
     return [
       { name: 'More Cheese', cost: 0.10 }
       , { name: 'Sausage', cost: 0.50 }
@@ -16,5 +16,17 @@ export class PizzaService {
       , { name: 'Basil', cost: 0.75 }      
     ];
   }
+
+ */
+
+public getAvailablePizzaToppings() {
+  return [
+    "Extra Cheese"
+    , "Sausage"
+    , "Pepperoni"
+    , "Mushrooms"
+  ];
+}
+
 
 }
