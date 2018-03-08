@@ -1,1 +1,20 @@
-<span><h2>Dillon's Pizza toppings</h2></span>
+<h2>Dillon's Pizza toppings</h2>
+
+<span *ngFor = 'let pt of toppingTypes'>
+    <label>
+        <input type="checkbox" [(ngModel)]='pt.checked' />
+        {{pt.name}}
+
+        <br />
+    </label>
+
+</span>
+
+<span >
+    <button type="button">Select All</button>
+    <button type="button">Select None</button>
+    <button type="button">Rrefresh</button>
+
+
+
+</span>

@@ -20,6 +20,8 @@ export class DebertPizzaToppingsComponent implements OnInit {
   ngOnInit() {
     this.toppingTypes = this.pSvc.getAvailablePizzaToppings()
       .map(x => ({ name: x, checked: false }));
+
+      
   }
 
 }
