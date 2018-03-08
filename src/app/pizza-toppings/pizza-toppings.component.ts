@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-pizza-toppings',
+  selector: 'pizza-toppings',
   templateUrl: './pizza-toppings.component.html',
   styleUrls: ['./pizza-toppings.component.css']
 })
