@@ -32,4 +32,17 @@ export class SomernikPizzaToppingsComponent implements OnInit {
       .map(x => ({ name: x, checked: true }));
   }
 
+  refresh() {
+    let selected = this.pizzaToppings.filter(x => x.checked == true);
+
+    if (selected.length > 0) {
+      this.message = "I like ";
+      selected.forEach(x => this.message += x.name + ', ');
+      this.message = this.message.slice(0,-2) + "!";
+
+    } else {
+      this.message = '';
+    }
+  }
+
 }
