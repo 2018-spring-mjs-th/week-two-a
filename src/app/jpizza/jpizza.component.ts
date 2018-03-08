@@ -13,7 +13,8 @@ export class JpizzaComponent implements OnInit {
   public toppings: any[];
 
   ngOnInit() {
-    this.toppings = this.ts.getAvailablePizzaToppings();
+    this.toppings = this.ts.getAvailablePizzaToppings()
+      .map(x => ({name: x, checked: false}));
   }
 
 }
