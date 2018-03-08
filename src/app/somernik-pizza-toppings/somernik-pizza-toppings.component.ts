@@ -22,4 +22,8 @@ export class SomernikPizzaToppingsComponent implements OnInit {
     this.uncheckAll();
   }
 
+  uncheckAll() {
+    this.pizzaToppings = this.pizzaService.getAvailablePizzaToppings()
+      .map(x => ({ name: x, checked: false }));
+  }
 }

@@ -1,3 +1,10 @@
 <div id='sarahspizza'>
-
+    <h2>Sarah's Pizza</h2>
+    <span *ngFor='let topping of pizzaToppings'>
+      <label>
+        <input type='checkbox' [(ngModel)]='topping.checked' />
+        {{ topping.name }}
+      </label><br />
+    </span>
+    <br />
 </div>
