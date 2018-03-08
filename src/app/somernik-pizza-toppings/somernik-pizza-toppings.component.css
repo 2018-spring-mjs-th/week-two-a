@@ -1,0 +1,9 @@
+div#sarahspizza {
+    border: 0.25em green solid;
+    border-radius: 0.5em;
+    padding: 1em;
+}
+
+h2 {
+    margin: 0
+}
