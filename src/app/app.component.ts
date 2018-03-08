@@ -44,7 +44,7 @@ export class AppComponent {
 
   public addFunnyQuiz() {
     //this.quizzes.push("Funny Quiz");
-    this.quizzes.push({ name: "Funny Quiz", showDelete: false, questionTypeSummary: foo });
+    this.quizzes.push({ name: "Funny Quiz", showDelete: false, questionTypeSummary: 'foo' });
   }
 
   newQuizName = "";
@@ -56,7 +56,7 @@ export class AppComponent {
       .map(x => x.name)
       .join(', ');
 
-    this.quizzes.push({ name: this.newQuizName, showDelete: true, questionTypeSummary: foo });
+    this.quizzes.push({ name: this.newQuizName, showDelete: true, questionTypeSummary: 'foo' });
     this.newQuizName = "";
   }
 

@@ -13,13 +13,11 @@ interface quizType {
 })
 export class QuestionTypesComponent implements OnInit {
 
-<<<<<<< Updated upstream
-  constructor(private qtService: QuestionTypesService) { }
+
+  constructor(private qtService: QuestionTypesService) { };
+  
 
   public questionTypes: quizType[];
-=======
-  constructor(private questionTypes){ }
->>>>>>> Stashed changes
 
   ngOnInit() {
     this.questionTypes = this.qtService.getAvailableQuestionTypes()
