@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { QuestionTypesService } from './question-types.service';
 import { PizzaToppingsService } from './pizza-toppings.service';
 import { QuestionTypesComponent } from './question-types/question-types.component';
+import { DcasebeerPizzaToppingsComponent } from './dcasebeer-pizza-toppings/dcasebeer-pizza-toppings.component';
 import { LuiiigiisPizzaPalaceComponent } from './luiiigii-pizza-palace/luiiigii-pizza-toppings.component';
 import { ComponentEjutenComponent } from './component-ejuten/component-ejuten.component';
 import { QliuPizzaToppingsComponent } from './qliu-pizza-toppings/qliu-pizza-toppings.component';
@@ -24,6 +25,7 @@ import { PizzaToppingsComponent } from './pizza-toppings/pizza-toppings.componen
   declarations: [
     AppComponent,
     QuestionTypesComponent,
+    DcasebeerPizzaToppingsComponent,
     LuiiigiisPizzaPalaceComponent,
     ComponentEjutenComponent,
     QliuPizzaToppingsComponent,
