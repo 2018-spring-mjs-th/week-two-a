@@ -1,0 +1,19 @@
+<div>
+  <span><h2>Amy's Pizza, Hot and Fresh</h2></span>
+
+<span *ngFor = 'let pt of toppingTypes'>
+  <label>
+    <input type="checkbox" [(ngModel)]='pt.checked' />
+    
+    {{ pt.name }}
+    <br />
+  </label>
+</span>
+<span>
+  <br />
+  <button type="button" (click)="checkAll()">Check All</button>
+  <button type="button" (click)="checkNone()">Uncheck All</button>
+  <button type="button" (click)="refresh()">Refresh</button> {{toppingChoices}}
+
+</span>
+</div>
