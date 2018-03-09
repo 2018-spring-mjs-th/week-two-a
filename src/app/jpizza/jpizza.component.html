@@ -2,5 +2,10 @@
 
 
 <label *ngFor="let pt of toppings">
-  {{pt}}
-</label>
+ <input type="checkbox"/> {{pt.name}}
+</label><br>
+<br>
+<button class='btn btn-primary' (click)='checkAll()'>Glutton</button>
+<button class='btn btn-warning' (click)='unCheckAll()'>Clear Order</button>
+<button class='btn btn-success' (click)='orderPie()'>Order</button>
+

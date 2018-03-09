@@ -8,7 +8,12 @@ export class PizzaToppingsService {
   public getAvailablePizzaToppings() {
     return [
       "Extra Cheese"
-      , "Sausage"
+      , "Chorizo"
+      , "Green Peppers"
+      , "Onions"
+      , "Corn"
+      , "Arugula"
+      , "Mushrooms"
     ];
   }
 }
