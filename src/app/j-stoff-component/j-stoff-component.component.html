@@ -1,0 +1,13 @@
+<h3>Jacob Stoffregen Pizza stuff, I guess</h3>
+<div>
+    <span *ngFor="let topping of pizzaToppings">
+        <label>
+            <input type="checkbox" [(ngModel)]="topping.checked"/>
+            {{ topping.topping }}
+        </label>
+        <br/>
+    </span>
+</div>
+
+<button (click)="orderPizza()">Order</button>
+<p>{{ outputMessage }}</p>

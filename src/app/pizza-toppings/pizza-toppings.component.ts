@@ -1,46 +1,48 @@
 import { Component, OnInit } from '@angular/core';
 import { PizzaToppingsService } from '../pizza-toppings.service';
 
-interface PizzaTopping {
-	name: string;
-	checked: boolean;
+interface pizzaToppings {
+  name: string;
+  checked: boolean;
 }
 
-
-
 @Component({
-    selector: 'pizza-toppings',
-    templateUrl: './pizza-toppings.component.html',
-    styleUrls: ['./pizza-toppings.component.css']
+  selector: 'pizza-toppings',
+  templateUrl: './pizza-toppings.component.html',
+  styleUrls: ['./pizza-toppings.component.css']
 })
 export class PizzaToppingsComponent implements OnInit {
 
-	// Grab the Pizza Service
-	constructor(private pizza_service: PizzaToppingsService) { }
-
-	selected_toppings: string;
-	topping_options: PizzaTopping[];
-	
-	// On init reference the pizza service and convert toppings to PizzaTopping object
-	ngOnInit() {
-		this.topping_options = this.pizza_service.getAvailablePizzaToppings()
-			.map(x => ({ name: x, checked: false }));
-	}
-
-	clearAllToppings() {
-		this.topping_options = this.topping_options
-			.map(x => ({ ...x, checked: false }));
-	}
-	
-	selectAllToppings() {
-		this.topping_options = this.topping_options
-			.map(x => ({ ...x, checked: true }));
-	}
-
-	refreshSelectedToppings() {	
-		this.selected_toppings = this.topping_options
-			.filter(x => x.checked)
-			.map(x => x.name).join(', ');
-	}
-}
-
+    constructor(private pizzaService: PizzaToppingsService) { }
+  
+    public pizzaToppings: pizzaToppings[];
+    public message = '';
+  
+    ngOnInit() {
+      this.uncheckAll();
+    }
+  
+    uncheckAll() {
+      this.pizzaToppings = this.pizzaService.getAvailablePizzaToppings()
+        .map(x => ({ name: x, checked: false }));
+    }
+  
+    checkAll() {
+      this.pizzaToppings = this.pizzaService.getAvailablePizzaToppings()
+        .map(x => ({ name: x, checked: true }));
+    }
+  
+    refresh() {
+      let selected = this.pizzaToppings.filter(x => x.checked == true);
+  
+      if (selected.length > 0) {
+        this.message = "My favorite toppings are ";
+        selected.forEach(x => this.message += x.name + ', ');
+        this.message = this.message.slice(0,-2) + ".";
+  
+      } else {
+        this.message = '';
+      }
+    }
+  
+  }
