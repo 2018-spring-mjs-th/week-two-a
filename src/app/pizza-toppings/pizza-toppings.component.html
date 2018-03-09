@@ -1,15 +1,19 @@
-<div>
-	<h1>
-		Brandon Ciancio  - Pizza Component
-	</h1>
+<div class="bciancio-content">
+	<h3>
+		Brandon Ciancio 
+	</h3>
 	<div *ngFor="let to of topping_options">
 		<label>
-			{{ to.name }}
 			<input type="checkbox" [(ngModel)]="to.checked">
+			{{ to.name }}
 		</label>
 	</div>
-	<button (click)="clearAllToppings()">Clear All</button>
-	<button (click)="selectAllToppings()">Select All</button>
-	<button (click)="refreshSelectedToppings()">Refresh</button>
-	<div>{{ selected_toppings }}</div>
+	<div class="button-container">
+		<button (click)="clearAllToppings()">Clear All</button>
+		<button (click)="selectAllToppings()">Select All</button>
+		<button (click)="refreshSelectedToppings()">Refresh</button>		
+	</div>
+	<div>
+		{{ selected_toppings }}
+	</div>
 </div>

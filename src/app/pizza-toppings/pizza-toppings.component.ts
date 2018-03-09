@@ -18,9 +18,7 @@ export class PizzaToppingsComponent implements OnInit {
 	// Grab the Pizza Service
 	constructor(private pizza_service: PizzaToppingsService) { }
 
-
 	selected_toppings: string;
-
 	topping_options: PizzaTopping[];
 	
 	// On init reference the pizza service and convert toppings to PizzaTopping object
