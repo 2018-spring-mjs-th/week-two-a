@@ -17,8 +17,6 @@ export class PizzaService {
   //   ];
   // }
 
-
-
 public getAvailablePizzaToppings() {
   return [
     "Extra Cheese"
