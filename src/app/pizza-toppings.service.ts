@@ -10,6 +10,11 @@ export class PizzaToppingsService {
       "Extra Cheese"
       , "Sausage"
       , "Mushroom"
+      , "Kalamata Olives"
+      , "Spinach"
+      , "Pepperoni"
+      , "Onions"
+      , "The Works"
     ];
   }
 }
