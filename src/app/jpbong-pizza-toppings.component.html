@@ -1,0 +1,19 @@
+<div>
+  <h3>Za</h3>
+  <span *ngFor="let topping of toppingType">
+    <label>
+      <input type="checkbox" [(ngModel)]="topping.checked" />
+      {{ topping.topping }}
+    </label>
+  </span>
+  <br />
+  <span>
+    <br />
+    <button type="button" (click)="checkAll()">Check All Toppings</button>
+    <button type="button" (click)="uncheckAll()">Uncheck All Toppings</button>
+    <button type="button" (click)="order()">Order</button>
+    <br />
+    <br />
+    Za toppings: {{ listOfToppings }}
+  </span>
+</div>

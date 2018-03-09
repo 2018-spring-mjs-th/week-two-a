@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { FormsModule } from '@angular/forms';
 import { QuestionTypesComponent } from './question-types/question-types.component';
+import { JpbongPizzaToppingsComponent } from './jpbong-pizza-toppings.component';
 import { QuestionTypesService} from './question-types.service';
 import { JasontoppingsComponent } from './jasontoppings/jasontoppings.component'
 import { PizzaToppingsService } from './pizza-toppings.service';
@@ -31,6 +32,7 @@ import { PizzaToppingsComponent } from './pizza-toppings/pizza-toppings.componen
     ,JasontoppingsComponent
     ,AppComponent,
     QuestionTypesComponent,
+    JpbongPizzaToppingsComponent,
     JpizzaComponent,
     PizzaToppingsComponent,
     BciancioPizzaToppingsComponent,
