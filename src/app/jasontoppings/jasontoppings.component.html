@@ -1,9 +1,15 @@
-<p>
-  jasontoppings works!
+
   <div>
     <p>Jason's Toppings</p>
-    <ul>
-      <li></li>
-    </ul>
+    <div *ngFor = 'let t of pizzaToppings'>
+      <label>
+        {{ t.name }}
+        <input type="checkbox" [(ngModel)]='t.checked'>
+      </label>
+    </div>
+    <button type="button" (click)="checkAllToppings()">All</button>
+    <button type="button" (click)="removeAllToppings()">None</button>
+    <button type="button" (click)="updateToppings()">Update</button>
+
+    <p>{{ pizzaDescription }}</p>
   </div>
-</p>
