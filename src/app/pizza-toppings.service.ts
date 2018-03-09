@@ -9,6 +9,7 @@ export class PizzaToppingsService {
     return [
       "Extra Cheese"
       , "Sausage"
+      , "Pepperoni"
     ];
   }
 }
