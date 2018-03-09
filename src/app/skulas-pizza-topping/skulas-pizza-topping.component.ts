@@ -19,7 +19,7 @@ export class SkulasPizzaToppingComponent implements OnInit {
   public pizzaDescription: string;
 
   ngOnInit() {
-    this.skPizzaToppings = this.skPizzaToppingService.getAvailableSkPizzaToppings()
+    this.skPizzaToppings = this.skPizzaToppingService.getAvailablePizzaToppings()
       .map(p => ({name: p, checked: false}));
   }
 
