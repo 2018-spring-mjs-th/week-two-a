@@ -15,4 +15,12 @@ export class PizzaToppingsService {
       , "The Works"
     ];
   }
+
+  public getAvailableSkPizzaToppings() {
+    return [
+      "Extra Cheese"
+      , "Sausage"
+      , "Pepperoni"
+    ];
+  }
 }
