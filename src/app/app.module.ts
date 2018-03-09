@@ -5,10 +5,10 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { FormsModule } from '@angular/forms';
-
-import { QuestionTypesService } from './question-types.service';
-import { PizzaToppingsService } from './pizza-toppings.service';
 import { QuestionTypesComponent } from './question-types/question-types.component';
+import { QuestionTypesService} from './question-types.service';
+import { JasontoppingsComponent } from './jasontoppings/jasontoppings.component'
+import { PizzaToppingsService } from './pizza-toppings.service';
 import { JpizzaComponent } from './jpizza/jpizza.component';
 import { BciancioPizzaToppingsComponent } from './bciancio-pizza-toppings/bciancio-pizza-toppings.component';
 import { DebertPizzaToppingsComponent} from './debert-pizza-toppings/debert-pizza-toppings.component'
@@ -26,7 +26,10 @@ import { PizzaToppingsComponent } from './pizza-toppings/pizza-toppings.componen
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
+    ,QuestionTypesComponent
+    ,JasontoppingsComponent
+    ,AppComponent,
     QuestionTypesComponent,
     JpizzaComponent,
     PizzaToppingsComponent,
@@ -49,7 +52,7 @@ import { PizzaToppingsComponent } from './pizza-toppings/pizza-toppings.componen
   ],
   providers: [
     QuestionTypesService
-    , PizzaToppingsService
+      , PizzaToppingsService
   ],
   bootstrap: [AppComponent]
 })
