@@ -1,6 +1,6 @@
-p {
-    height: 10em;
-    width: 40em;
+div {
+    
+    width: 50em;
     border: .2em solid red;
     padding: 0 1em 2em;
 }
