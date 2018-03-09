@@ -14,9 +14,9 @@ import { JasontoppingsComponent } from './jasontoppings/jasontoppings.component'
 
 @NgModule({
   declarations: [
-    AppComponent,
-    QuestionTypesComponent,
-    JasontoppingsComponent
+    AppComponent
+    ,QuestionTypesComponent
+    ,JasontoppingsComponent
   ],
   imports: [
     BrowserModule
