@@ -1,14 +1,14 @@
 
   <div class="card card-outline-primary">
     <div class="card-header">Jason's Toppings</div>
-    <div *ngFor = 'let t of pizzaToppings' class="input-group">
+    <div *ngFor = 'let t of pizzaToppings' class="input-group mb-3">
       <span class="input-group-addon">
           <input type="checkbox" (click)="addToPrice()"[(ngModel)]='t.checked' aria-label="label">
-
+          {{ t.name }}
       </span>
    
     </div>
-    <div class="col-sm-6">
+    <div class="btn-group btn-group-lg" role="group" aria-label="Basic Example">
     <button class="btn btn-primary" type="button" (click)="checkAllToppings()">All</button>
     <button class="btn btn-primary" type="button" (click)="removeAllToppings()">None</button>
     <button class="btn btn-primary" type="button" (click)="updateToppings()">Update</button>
