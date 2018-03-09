@@ -16,12 +16,29 @@ export class DebertPizzaToppingsComponent implements OnInit {
   constructor(private pSvc: PizzaToppingsService) { }
 
   public toppingTypes: toppingType[];
+  public selectedToppings: String;
 
   ngOnInit() {
     this.toppingTypes = this.pSvc.getAvailablePizzaToppings()
-      .map(x => ({ name: x, checked: false }));
+      .map(x => ({ name: x, checked: false }));      
+  }
 
-      
+  selectAll() {
+    this.toppingTypes = this.pSvc.getAvailablePizzaToppings()
+      .map(x => ({ name: x, checked: true }));      
+  }
+
+  deselectAll() {
+    this.toppingTypes = this.pSvc.getAvailablePizzaToppings()
+      .map(x => ({ name: x, checked: false }));      
+  }
+
+  selectToppings() { 
+    this.selectedToppings = "My pizza has "
+    this.selectedToppings += this.toppingTypes
+    .filter(x => x.checked)
+    .map(x => x.name)
+    .join(', ');   
   }
 
 }

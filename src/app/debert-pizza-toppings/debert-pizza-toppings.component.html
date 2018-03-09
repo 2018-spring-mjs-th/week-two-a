@@ -11,9 +11,10 @@
 </span>
 
 <span >
-    <button type="button">Select All</button>
-    <button type="button">Select None</button>
-    <button type="button">Rrefresh</button>
+    <button type="button" (click)="selectAll()">Select All</button>
+    <button type="button" (click)="deselectAll()">Select None</button>
+    <button type="button" (click)="selectToppings()">Rrefresh</button>
+    {{selectedToppings}}
 
 
 
