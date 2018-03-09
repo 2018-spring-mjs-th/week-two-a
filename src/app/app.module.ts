@@ -10,13 +10,15 @@ import { QuestionTypesService } from './question-types.service';
 import { PizzaToppingsService } from './pizza-toppings.service';
 import { QuestionTypesComponent } from './question-types/question-types.component';
 import { PizzaToppingsComponent } from './pizza-toppings/pizza-toppings.component';
+import { BciancioPizzaToppingsComponent } from './bciancio-pizza-toppings/bciancio-pizza-toppings.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     QuestionTypesComponent,
-    PizzaToppingsComponent
+    PizzaToppingsComponent,
+    BciancioPizzaToppingsComponent
   ],
   imports: [
     BrowserModule
