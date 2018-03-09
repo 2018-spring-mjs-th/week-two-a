@@ -1,5 +1,15 @@
 <div>
-	<button>Clear All</button>
-	<button>Select All</button>
-	<button>Refresh</button>
+	<h1>
+		Brandon Ciancio  - Pizza Component
+	</h1>
+	<div *ngFor="let to of topping_options">
+		<label>
+			{{ to.name }}
+			<input type="checkbox" [(ngModel)]="to.checked">
+		</label>
+	</div>
+	<button (click)="clearAllToppings()">Clear All</button>
+	<button (click)="selectAllToppings()">Select All</button>
+	<button (click)="refreshSelectedToppings()">Refresh</button>
+	<div>{{ selected_toppings }}</div>
 </div>
