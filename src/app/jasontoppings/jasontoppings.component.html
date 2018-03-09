@@ -1,17 +1,25 @@
 
-  <div>
-    <p>Jason's Toppings</p>
-    <div *ngFor = 'let t of pizzaToppings'>
-      <label>
-        {{ t.name }}
-        <input type="checkbox" (click)="addToPrice()"[(ngModel)]='t.checked'>
-       <!-- {{t.cost}} -->
-      </label>
-    </div>
-    <button type="button" (click)="checkAllToppings()">All</button>
-    <button type="button" (click)="removeAllToppings()">None</button>
-    <button type="button" (click)="updateToppings()">Update</button>
+  <div class="card card-outline-primary">
+    <div class="card-header">Jason's Toppings</div>
+    <div *ngFor = 'let t of pizzaToppings' class="input-group">
+      <span class="input-group-addon">
+          <input type="checkbox" (click)="addToPrice()"[(ngModel)]='t.checked' aria-label="label">
 
-    <p>{{ pizzaDescription }}</p>
+      </span>
+   
+    </div>
+    <div class="col-sm-6">
+    <button class="btn btn-primary" type="button" (click)="checkAllToppings()">All</button>
+    <button class="btn btn-primary" type="button" (click)="removeAllToppings()">None</button>
+    <button class="btn btn-primary" type="button" (click)="updateToppings()">Update</button>
+    </div>
+
+    <p class="card-text">{{ pizzaDescription }}</p>
   </div>
  
+     
+      <!-- <label>
+        {{ t.name }}
+        <input type="checkbox" (click)="addToPrice()"[(ngModel)]='t.checked'>
+        {{t.cost}} 
+      </label> -->
