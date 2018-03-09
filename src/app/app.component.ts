@@ -53,12 +53,12 @@ export class AppComponent {
   newQuizName = "";
 
   public addQuiz() {
-    let foo = this.questionTypeSubComponent.questionTypes
+    let summary = this.questionTypeSubComponent.questionTypes
       .filter(x => x.checked)
       .map(x => x.name)
       .join(', ');
 
-    this.quizzes.push({ name: this.newQuizName, showDelete: true, questionTypeSummary: foo });
+    this.quizzes.push({ name: this.newQuizName, showDelete: true, questionTypeSummary: summary });
     this.newQuizName = "";
   }
 

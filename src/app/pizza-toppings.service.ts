@@ -12,6 +12,7 @@ export class PizzaToppingsService {
       , "Kalamata Olives"
       , "Spinach"
       , "Pepperoni"
+      , "Onions"
       , "The Works"
     ];
   }
