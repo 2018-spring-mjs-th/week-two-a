@@ -5,7 +5,11 @@ export class QuestionTypesService {
 
   constructor() { }
 
+<<<<<<< HEAD
   public getAvailableQuestionTypes() {
+=======
+  public getQuestionTypes() {
+>>>>>>> master
     return [
       "Multiple Choice"
       , "True/False"

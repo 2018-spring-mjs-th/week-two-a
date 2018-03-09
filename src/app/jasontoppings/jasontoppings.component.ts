@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PizzaService} from "../pizza-toppings.service";
+import { PizzaToppingsService} from "../pizza-toppings.service";
 
 interface jmPizzaTopping {
   name: String;
@@ -22,7 +22,7 @@ export class JasontoppingsComponent implements OnInit {
   public pizzaToppings: jmPizzaTopping [];
   public pizzaDescription: string;
   public price: number;
-  constructor(private pizzaService: PizzaService) { }
+  constructor(private pizzaService: PizzaToppingsService) { }
 
   ngOnInit() {
     this.pizzaToppings = this.pizzaService.getAvailablePizzaToppings()
