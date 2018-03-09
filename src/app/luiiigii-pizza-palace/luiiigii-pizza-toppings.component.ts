@@ -32,14 +32,13 @@ export class LuiiigiisPizzaPalaceComponent implements OnInit {
       .map(x => ({ name: x, checked: true }));
   }
 
-  reset() {
+  order() {
     let selected = this.pizza_toppings.filter(x => x.checked == true);
 
     if (selected.length > 0) {
-      this.message = "I like ";
+      this.message = "Serving up a pie with ";
       selected.forEach(x => this.message += x.name + ', ');
       this.message = this.message.slice(0,-2) + "!";
-
     } else {
       this.message = '';
     }

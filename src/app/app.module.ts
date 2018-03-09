@@ -9,12 +9,14 @@ import { FormsModule } from '@angular/forms';
 import { QuestionTypesService } from './question-types.service';
 import { PizzaToppingsService } from './pizza-toppings.service';
 import { QuestionTypesComponent } from './question-types/question-types.component';
+import { LuiiigiisPizzaPalaceComponent } from './luiiigii-pizza-palace/luiiigii-pizza-toppings.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionTypesComponent
+    QuestionTypesComponent,
+    LuiiigiisPizzaPalaceComponent
   ],
   imports: [
     BrowserModule
