@@ -9,6 +9,9 @@ export class PizzaToppingsService {
     return [
       "Extra Cheese"
       , "Sausage"
+      , "Green Olives"
+      , "Black Olives"
+      , "Carmalized Onions"
       , "Mushroom"
       , "Kalamata Olives"
       , "Spinach"
