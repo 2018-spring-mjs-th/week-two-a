@@ -10,7 +10,11 @@ export class PizzaToppingsService {
       "Extra Cheese"
       , "Sausage"
       , "Pepperoni"
+<<<<<<< HEAD
       , "Onions"
+=======
+      , "The Works"
+>>>>>>> master
     ];
   }
 }
