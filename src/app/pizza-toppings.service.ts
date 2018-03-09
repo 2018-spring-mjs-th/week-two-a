@@ -11,6 +11,7 @@ export class PizzaToppingsService {
       , "Sausage"
       , "Pepperoni"
       , "The Works"
+      , "Artichoke"
     ];
   }
 }
