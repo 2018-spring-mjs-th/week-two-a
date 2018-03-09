@@ -7,7 +7,7 @@ interface pizza_topping {
 }
 
 @Component({
-  selector: 'luiiigii_pizza_palace',
+  selector: 'luiiigii-pizza-palace',
   templateUrl: './luiiigii-pizza-toppings.component.html',
   styleUrls: ['./luiiigii-pizza-toppings.component.css']
 })
