@@ -1,0 +1,14 @@
+<div id='luiiigii_pizza_palace'>
+    <h2>Luiiigii's Pizza Palace</h2>
+    <span *ngFor='let topping of pizza_toppings'>
+      <label>
+        <input type='checkbox' [(ngModel)]='topping.checked' />
+        {{topping.name}}
+      </label><br />
+    </span>
+    <br />
+    <input type="button" value="Select All" (click)="select_all()" />
+    <input type="button" value="Deselect All" (click)="deselect_all()" />
+    <input type="button" value="Reset" (click)="reset()" />
+    <span>{{message}}</span>
+</div>
