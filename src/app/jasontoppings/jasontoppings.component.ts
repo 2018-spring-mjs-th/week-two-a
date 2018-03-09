@@ -6,6 +6,12 @@ interface jmPizzaTopping {
   checked: boolean;
 }
 
+// interface jmPizzaTopping {
+//   name: String;
+//   checked: boolean;
+//   cost:number;
+// }
+
 @Component({
   selector: 'jasontoppings',
   templateUrl: './jasontoppings.component.html',
@@ -24,6 +30,13 @@ export class JasontoppingsComponent implements OnInit {
     this.pizzaDescription = "";
     this.price = 10
   }
+
+  // ngOnInit() {
+  //   this.pizzaToppings = this.pizzaService.getAvailablePizzaToppings()
+  //       .map(x =>({name: x, checked: false, cost: 0}));
+  //   this.pizzaDescription = "";
+  //   this.price = 10
+  // }
 public checkAllToppings() {
   this.pizzaToppings.forEach(x => x.checked = true);
 }
@@ -39,7 +52,7 @@ public updateToppings() {
     this.pizzaDescription = "You have a plain pizza."
   }
   else {
-
+  
   this.pizzaDescription = "My pizza has ";
   this.pizzaDescription += this.pizzaToppings
           .filter(x => x.checked)
@@ -50,4 +63,9 @@ public updateToppings() {
   this.pizzaDescription += " \nIt will cost $" + this.price;
 }
 
+
+// public addToPrice() {
+
+// }
 }
+
