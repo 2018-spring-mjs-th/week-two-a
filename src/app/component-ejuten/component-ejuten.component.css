@@ -5,6 +5,7 @@ h2 {
     background-color: lightblue;
     padding: 5px;
     margin: 10px;
+    text-align: center;
 }
 #whatCustomerOrdered {
     background-color: lightgoldenrodyellow;
