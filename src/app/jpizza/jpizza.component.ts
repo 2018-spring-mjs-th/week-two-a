@@ -12,7 +12,6 @@ export class JpizzaComponent implements OnInit {
 
   public toppings: any[];
   public pieOrder = '';
-  public pizzaOrder: any[];
 
   ngOnInit() {
     this.unCheckToppings();

@@ -2,10 +2,12 @@
 
 
 <label *ngFor="let pt of toppings">
- <input type="checkbox"/> {{pt.name}}
+ <input type="checkbox" [(ngModel)] = 'pt.checked'/> {{pt.name}}
 </label><br>
 <br>
 <button class='btn btn-primary' (click)='checkAll()'>Glutton</button>
-<button class='btn btn-warning' (click)='unCheckAll()'>Clear Order</button>
+<button class='btn btn-warning' (click)='unCheckToppings()'>Clear Order</button>
 <button class='btn btn-success' (click)='orderPie()'>Order</button>
+
+<p>{{pieOrder}}</p>
 
