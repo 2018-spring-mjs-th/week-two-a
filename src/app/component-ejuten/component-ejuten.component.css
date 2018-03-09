@@ -1,0 +1,11 @@
+h2 {
+    color: darkblue;
+}
+#pizzaDesign {
+    background-color: lightblue;
+    padding: 5px;
+    margin: 10px;
+}
+#whatCustomerOrdered {
+    background-color: lightgoldenrodyellow;
+}
