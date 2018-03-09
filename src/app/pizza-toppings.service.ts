@@ -7,11 +7,21 @@ export class PizzaToppingsService {
 
   public getAvailablePizzaToppings() {
     return [
-      "Extra Cheese",
-      "Sausage",
-      "Pepperonni",
-      "Pineapple",
-      "Canadian Bacon"
+      "Extra Cheese"
+      , "Sausage"
+      , "Pineapple"
+      , "Canadian Bacon"
+      , "Chicken"
+      , "Steak"
+      , "Pepperoni"
+      , "Green Olives"
+      , "Black Olives"
+      , "Carmalized Onions"
+      , "Mushroom"
+      , "Kalamata Olives"
+      , "Spinach"
+      , "Onions"
+      , "The Works"
     ];
   }
 }
