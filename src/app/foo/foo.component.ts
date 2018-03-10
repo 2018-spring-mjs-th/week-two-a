@@ -13,7 +13,7 @@ export class FooComponent implements OnInit {
   toppings = [];
 
   ngOnInit() {
-    this.toppings = this.toppingSvc.getAvailablePizzaToppings().map(x => ({ name: x, checked: false }));
+    this.toppings = this.toppingSvc.getAvailablePizzaToppings().sort().map(x => ({ name: x, checked: false }));
   }
 
   chosenToppings = "";
