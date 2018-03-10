@@ -3,9 +3,11 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { QuestionTypesComponent } from './question-types/question-types.component';
 
 import { FormsModule } from '@angular/forms';
-import { QuestionTypesComponent } from './question-types/question-types.component';
+
+import { FooComponent } from './foo/foo.component';
 import { JpbongPizzaToppingsComponent } from './jpbong-pizza-toppings.component';
 import { QuestionTypesService} from './question-types.service';
 import { JasontoppingsComponent } from './jasontoppings/jasontoppings.component'
@@ -27,8 +29,9 @@ import { PizzaToppingsComponent } from './pizza-toppings/pizza-toppings.componen
 
 @NgModule({
   declarations: [
-    AppComponent
-    ,QuestionTypesComponent
+    AppComponent,
+    QuestionTypesComponent,
+    FooComponent
     ,JasontoppingsComponent
     ,AppComponent,
     QuestionTypesComponent,
