@@ -2,9 +2,9 @@ import { Component, ViewChild } from '@angular/core';
 import { QuestionTypesComponent } from './question-types/question-types.component';
 
 interface quizDisplay {
-  name: string;
-  showDelete: boolean;
-  questionTypeSummary: string;
+  name: string,
+  showDelete: boolean,
+  questionTypeSummary: string
 }
 
 @Component({
@@ -53,12 +53,12 @@ export class AppComponent {
   newQuizName = "";
 
   public addQuiz() {
-    let foo = this.questionTypeSubComponent.questionTypes
+    let summary = this.questionTypeSubComponent.questionTypes
       .filter(x => x.checked)
       .map(x => x.name)
       .join(', ');
 
-    this.quizzes.push({ name: this.newQuizName, showDelete: true, questionTypeSummary: foo });
+    this.quizzes.push({ name: this.newQuizName, showDelete: true, questionTypeSummary: summary });
     this.newQuizName = "";
   }
 
@@ -74,4 +74,5 @@ export class AppComponent {
     window.alert('here');
     this.answer = Number(this.number1) + Number(this.number2)
   };
+
 }
