@@ -1,16 +1,20 @@
 <div class="pizza-topping-selection">
-  <h1>Drew's Pizza Toppings</h1>
-  <div *ngFor="let topping of toppings">
-    <label>
-      {{topping.name}}
-      <input type="checkbox" [(ngModel)]="topping.checked" />
-    </label>
+  <div class="pizza-topping-title">
+    <h1>Drew's Pizza Toppings</h1>
+  </div>
+
+  <div class="toppings-container">
+    <div *ngFor="let topping of toppings" class="topping-container">
+      <label>
+        <input type="checkbox" [(ngModel)]="topping.checked" (change)="refresh()" />
+        {{topping.name}}
+      </label>
+    </div>
   </div>
 
   <div class="actions">
-    <button (click)="selectAll()">Select All</button>
-    <button (click)="clear()">Clear</button>
-    <button (click)="refresh()">Refresh</button>
+    <button class="btn btn-primary" (click)="selectAll()">Select All</button>
+    <button class="btn btn-warning" (click)="clear()">Clear</button>
   </div>
 
   <div class="message">

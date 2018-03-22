@@ -1,0 +1,12 @@
+.pizza-topping-selection {
+    padding-left: 1em;
+}
+
+.toppings-container {
+    display: grid;
+    grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+}
+
+.topping-container {
+    padding: 5px 2px;
+}
