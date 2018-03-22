@@ -32,5 +32,16 @@ export class JStoffComponentComponent implements OnInit {
 
         this.outputMessage = message;
     }
+    
+    public selectAll() {
+        this.pizzaToppings.forEach(topping => {
+            topping.checked = true
+        });
+    }
 
+    public deselectAll() {
+        this.pizzaToppings.forEach(topping => {
+            topping.checked = false
+        });
+    }
 }
