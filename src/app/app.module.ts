@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { QuestionTypesComponent } from './question-types/question-types.component';
+
 
 import { FormsModule } from '@angular/forms';
 
@@ -12,10 +12,6 @@ import { JpbongPizzaToppingsComponent } from './jpbong-pizza-toppings.component'
 import { QuestionTypesService} from './question-types.service';
 import { JasontoppingsComponent } from './jasontoppings/jasontoppings.component'
 import { PizzaToppingsService } from './pizza-toppings.service';
-<<<<<<< HEAD
-import { QuestionTypesComponent } from './question-types/question-types.component';
-=======
->>>>>>> master
 import { JpizzaComponent } from './jpizza/jpizza.component';
 import { BciancioPizzaToppingsComponent } from './bciancio-pizza-toppings/bciancio-pizza-toppings.component';
 import { DebertPizzaToppingsComponent} from './debert-pizza-toppings/debert-pizza-toppings.component'
@@ -34,15 +30,11 @@ import { PizzaToppingsComponent } from './pizza-toppings/pizza-toppings.componen
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionTypesComponent,
-<<<<<<< HEAD
-=======
     FooComponent
     ,JasontoppingsComponent
     ,AppComponent,
     QuestionTypesComponent,
     JpbongPizzaToppingsComponent,
->>>>>>> master
     JpizzaComponent,
     PizzaToppingsComponent,
     BciancioPizzaToppingsComponent,
