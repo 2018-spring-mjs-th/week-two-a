@@ -22,6 +22,7 @@ export class EShaPizzaToppingsComponent implements OnInit {
 
   ngOnInit() {
     this.toppings = this.pizzaService.getAvailablePizzaToppings()
+      .sort()
       .map(x => ({ name: x, checked: false }));
   }
 
