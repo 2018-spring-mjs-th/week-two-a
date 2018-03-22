@@ -1,0 +1,19 @@
+.bciancio-content {
+    border: 1px solid black;
+    margin: 10px 0px;
+    padding: 20px;    
+    display: inline-block;
+}
+
+.bciancio-content h3 {
+    /* clockwise/compass: top, right, bottom left */
+    margin: 0px 0px 10px 0px;
+}
+
+.bciancio-content .button-container {
+    margin-top: 10px;
+}
+
+.bciancio-content .button-container button {    
+    margin-right: 5px;
+}
