@@ -5,7 +5,15 @@ export class PizzaToppingsService {
 
   constructor() { }
 
+  private delay = (ms) => {
+    const startPoint = new Date().getTime()
+    while (new Date().getTime() - startPoint <= ms) {/* wait */}
+  };
+
   public getAvailablePizzaToppings() {
+
+    this.delay(1000);
+
     return [
       "Extra Cheese"
       , "Chorizo"
