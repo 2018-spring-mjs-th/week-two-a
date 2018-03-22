@@ -1,6 +1,6 @@
 <fieldset>
   <legend>Renee's Pizza Joint</legend>
-    <span *ngFor= "let pizza of toppingType" >
+    <span *ngFor= "let pizza of toppingTypes" >
       <label>
         <input type="checkbox" [(ngModel)]="pizza.checked" />
         {{ pizza.topping }}
@@ -10,6 +10,6 @@
     <span>
       <button type="button" (click)="checkAll()">Check All</button>
       <button type="button" (click)="uncheckAll()">Uncheck All</button>
-      <button type="button" (click)="whatWeLove()">Refresh</button> I love {{listOfToppings}} !!!
+      <button type="button" (click)="whatWeLove()">Refresh</button> I love {{ listOfToppings }} !!!
     </span>
 </fieldset>

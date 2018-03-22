@@ -14,37 +14,36 @@ interface toppingType {
 })
 export class RgrittnerPizzaToppingsComponent implements OnInit {
 
+  constructor(private ptSvc: PizzaToppingsService) { }
   
-  constructor(private pizzaToppings: PizzaToppingsService) { }
 
-  public toppingType: toppingType[];
+  public toppingTypes: toppingType[];
 
   ngOnInit() {
-    this.toppingType = this.pizzaToppings.getAvailablePizzaToppings()
-      .map(x => ({topping: x, checked: false, summary: ""}));
+    this.toppingTypes = this.ptSvc.getAvailablePizzaToppings()
+    .map(x => ({ checked: false, topping: x, summary: ""}));
   }
 
   
   public checkAll() {
-    this.toppingType = this.pizzaToppings.getAvailablePizzaToppings()
-      .map(x => ({topping: x, checked: true, summary: x}));
+    this.toppingTypes.forEach(t => t.checked = true);
+    
   }
 
   public uncheckAll() {
-    this.toppingType = this.pizzaToppings.getAvailablePizzaToppings()
-      .map(x => ({topping: x, checked: false, summary: ""}));
+    this.toppingTypes.forEach(t => t.checked = false);
   }
 
   public listOfToppings: string;
 
   public whatWeLove(){
-    this.listOfToppings = this.toppingType
+    this.listOfToppings = this.toppingTypes
       .filter(x => x.checked)
       .map(x => x.topping)
       .join(', ');
-      console.log(this.listOfToppings);
+      
 
-    //this.toppingType.push({topping:})  ;
+    //\this.toppingType.push({topping:})  ;
      
   }
 
