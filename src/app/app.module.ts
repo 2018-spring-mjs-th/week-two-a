@@ -12,6 +12,7 @@ import { JpbongPizzaToppingsComponent } from './jpbong-pizza-toppings.component'
 import { QuestionTypesService} from './question-types.service';
 import { JasontoppingsComponent } from './jasontoppings/jasontoppings.component'
 import { PizzaToppingsService } from './pizza-toppings.service';
+import { EShaPizzaToppingsComponent } from './e-sha-pizza-toppings/e-sha-pizza-toppings.component';
 import { JpizzaComponent } from './jpizza/jpizza.component';
 import { BciancioPizzaToppingsComponent } from './bciancio-pizza-toppings/bciancio-pizza-toppings.component';
 import { DebertPizzaToppingsComponent} from './debert-pizza-toppings/debert-pizza-toppings.component'
@@ -32,9 +33,10 @@ import { HniesenPizzaToppingsComponent } from './hniesen-pizza-toppings-types/hn
   declarations: [
     AppComponent,
     QuestionTypesComponent,
-    FooComponent
-    ,JasontoppingsComponent
-    ,AppComponent,
+    EShaPizzaToppingsComponent,
+    FooComponent,
+    JasontoppingsComponent,
+    AppComponent,
     QuestionTypesComponent,
     JpbongPizzaToppingsComponent,
     JpizzaComponent,

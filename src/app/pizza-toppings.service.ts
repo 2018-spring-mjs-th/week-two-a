@@ -5,7 +5,15 @@ export class PizzaToppingsService {
 
   constructor() { }
 
+  private delay = (ms) => {
+    const startPoint = new Date().getTime()
+    while (new Date().getTime() - startPoint <= ms) {/* wait */}
+  };
+
   public getAvailablePizzaToppings() {
+
+    this.delay(1000);
+
     return [
       "Extra Cheese"
       , "Chorizo"
@@ -14,6 +22,10 @@ export class PizzaToppingsService {
       , "Corn"
       , "Arugula"
       , "Sausage"
+<<<<<<< HEAD
+      , "Pepperoni"
+      , "Pineapple because I'm going to hell"
+=======
       , "Basil"
       , "Bacon"
       , "Pineapple"
@@ -30,6 +42,7 @@ export class PizzaToppingsService {
       , "Onions"
       , "The Works"
       , "Artichoke"
+>>>>>>> master
     ];
   }
 }
