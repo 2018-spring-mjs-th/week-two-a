@@ -18,7 +18,7 @@ export class ComponentEjutenComponent implements OnInit {
     public toppingTypes: toppingType[];
 
     ngOnInit() {
-        this.toppingTypes = this.ptSvc.getAvailablePizzaToppings()
+        this.toppingTypes = this.ptSvc.getAvailablePizzaToppings().sort()
             .map(x => ({ name: x, checked: false }));
     }
 
