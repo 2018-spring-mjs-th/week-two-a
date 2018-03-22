@@ -19,8 +19,8 @@ export class AknappPizzaToppingsComponent implements OnInit {
   public toppingChoices: string;
 
   ngOnInit() {
-    this.toppingTypes = this.toppingTypes
-    .map(x => ({ ...x, checked: false }));
+    this.toppingTypes = this.ptService.getAvailablePizzaToppings()
+    .map(x => ({ name: x, checked: false }));
   }
 
   public checkAll() {
@@ -28,7 +28,7 @@ export class AknappPizzaToppingsComponent implements OnInit {
   }
 
   public checkNone() {
-    this.toppingTypes = this.toppingTypes.map(x => ({ ...x, checked: false }));
+    this.toppingTypes = this.toppingTypes.map(x => ({ name: x.name, checked: false }));
     
   }
 
