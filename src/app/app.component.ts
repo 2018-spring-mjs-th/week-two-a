@@ -2,9 +2,9 @@ import { Component, ViewChild } from '@angular/core';
 import { QuestionTypesComponent } from './question-types/question-types.component';
 
 interface quizDisplay {
-  name: string;
-  showDelete: boolean;
-  questionTypeSummary: string;
+  name: string,
+  showDelete: boolean,
+  questionTypeSummary: string
 }
 
 @Component({
