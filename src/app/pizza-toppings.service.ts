@@ -22,6 +22,8 @@ export class PizzaToppingsService {
       , "Corn"
       , "Arugula"
       , "Sausage"
+      , "Pepperoni"
+      , "Pineapple because I'm going to hell"
       , "Basil"
       , "Bacon"
       , "Pineapple"
