@@ -19,17 +19,16 @@ export class LuiiigiisPizzaPalaceComponent implements OnInit {
   public message = '';
 
   ngOnInit() {
-    this.deselect_all();
-  }
-
-  deselect_all() {
     this.pizza_toppings = this.pizza_service.getAvailablePizzaToppings()
       .map(x => ({ name: x, checked: false }));
   }
 
+  deselect_all() {
+    this.pizza_toppings = this.pizza_toppings.map(x => ({...x, checked: false }));
+  }
+
   select_all() {
-    this.pizza_toppings = this.pizza_service.getAvailablePizzaToppings()
-      .map(x => ({ name: x, checked: true }));
+    this.pizza_toppings = this.pizza_toppings.map(x => ({...x, checked: true }));
   }
 
   order() {
