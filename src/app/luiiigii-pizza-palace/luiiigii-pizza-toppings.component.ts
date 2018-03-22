@@ -24,11 +24,11 @@ export class LuiiigiisPizzaPalaceComponent implements OnInit {
   }
 
   deselect_all() {
-    this.pizza_toppings = this.pizza_toppings.map(x => ({...x, checked: false }));
+    this.pizza_toppings = this.pizza_toppings.map(x => ({name: this.lowerize(x.name), checked: false }));
   }
 
   select_all() {
-    this.pizza_toppings = this.pizza_toppings.map(x => ({...x, checked: true }));
+    this.pizza_toppings = this.pizza_toppings.map(x => ({name: x.name.toUpperCase(), checked: true }));
   }
 
   order() {
@@ -36,11 +36,24 @@ export class LuiiigiisPizzaPalaceComponent implements OnInit {
 
     if (selected.length > 0) {
       this.message = "Serving up a pie with ";
-      selected.forEach(x => this.message += x.name + ', ');
+      selected.forEach(x => this.message += this.lowerize(x.name) + ', ');
       this.message = this.message.slice(0,-2) + "!";
     } else {
       this.message = '';
     }
   }
 
+  lowerize(topping) {
+    var start = topping[0];
+    var rest = topping.slice(1);
+    return start.toUpperCase() + rest.toLowerCase();
+  }
+
+  upperize(topping) {
+    if (topping.checked) {
+      topping.name = this.lowerize(topping.name)
+    } else {
+      topping.name = topping.name.toUpperCase();
+    }
+  }
 }
