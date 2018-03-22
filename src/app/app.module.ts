@@ -7,7 +7,10 @@ import { QuestionTypesComponent } from './question-types/question-types.componen
 
 import { FormsModule } from '@angular/forms';
 
-import { QuestionTypesService } from './question-types.service';
+import { FooComponent } from './foo/foo.component';
+import { JpbongPizzaToppingsComponent } from './jpbong-pizza-toppings.component';
+import { QuestionTypesService} from './question-types.service';
+import { JasontoppingsComponent } from './jasontoppings/jasontoppings.component'
 import { PizzaToppingsService } from './pizza-toppings.service';
 <<<<<<< HEAD
 import { QuestionTypesComponent } from './question-types/question-types.component';
