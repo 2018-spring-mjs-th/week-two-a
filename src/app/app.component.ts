@@ -1,11 +1,16 @@
 import { Component, ViewChild } from '@angular/core';
 import { QuestionTypesComponent } from './question-types/question-types.component';
+import { EShaPizzaToppingsComponent } from './e-sha-pizza-toppings/e-sha-pizza-toppings.component';
 
 interface quizDisplay {
   name: string,
   showDelete: boolean,
   questionTypeSummary: string
 }
+
+// interface toppingDisplay {
+//   toppingName: string[]
+// }
 
 @Component({
   selector: 'app-root',
@@ -16,6 +21,9 @@ export class AppComponent {
 
   @ViewChild(QuestionTypesComponent)
   public questionTypeSubComponent: QuestionTypesComponent;
+ 
+  @ViewChild(EShaPizzaToppingsComponent)
+  public PizzaToppingsSubComponent: EShaPizzaToppingsComponent; 
 
   title = 'week-two-a';
 

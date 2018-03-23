@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionTypesService } from '../question-types.service';
 
-interface quizType {
+interface questionType {
   name: string;
   checked: boolean;
 }
@@ -15,7 +15,7 @@ export class QuestionTypesComponent implements OnInit {
 
   constructor(private qtSvc: QuestionTypesService) { }
 
-  public questionTypes: quizType[];
+  public questionTypes: questionType[];
 
   ngOnInit() {
     this.questionTypes = this.qtSvc.getQuestionTypes()
