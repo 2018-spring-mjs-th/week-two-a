@@ -1,6 +1,6 @@
 <div>
   <ul>
-    <li *ngFor="let pt of skPizzaToppings"><input type='checkbox' [(ngModel)]='pt.checked' />{{ pt.name }}</li>
+    <li *ngFor="let pt of skPizzaToppings"><input type='checkbox' (click)="updateTopping(pt)" />{{ pt.name }}</li>
   </ul>
   <button (click)="allSkToppings()">All</button>
   <button (click)="noSkToppings()">None</button>
