@@ -21,15 +21,23 @@ export class SkulasPizzaToppingComponent implements OnInit {
   ngOnInit() {
     this.skPizzaToppings = this.skPizzaToppingService.getAvailablePizzaToppings()
       .map(p => ({name: p, checked: false}));
+    this.describePizza();
   }
 
   // skulasPizzaToppings
   allSkToppings = () => {
     this.skPizzaToppings.forEach(p => p.checked = true);
+    this.describePizza();
   }
 
   noSkToppings = () => {
     this.skPizzaToppings.forEach(p => p.checked = false);
+    this.describePizza();
+  }
+
+  updateTopping = (pizzaTopping) => {
+    pizzaTopping.checked = true;
+    this.describePizza();
   }
 
   describePizza = () => {
