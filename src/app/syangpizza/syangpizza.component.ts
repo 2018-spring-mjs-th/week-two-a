@@ -8,26 +8,28 @@ import { PizzaToppingsService } from '../pizza-toppings.service';
 })
 export class SyangpizzaComponent implements OnInit {
 
-  constructor(private pizzaToppingService: PizzaToppingsService) { }
+  constructor(private ptservice: PizzaToppingsService) { }
 
   pizzaToppings = [];
 
   ngOnInit() {
-    this.pizzaToppings = this.pizzaToppingService.getAvailablePizzaToppings().map(x => ({ name: x, checked: false }));
+    this.pizzaToppings = this.ptservice.getAvailablePizzaToppings().map(x => ({ name: x, checked: false }));
   }
 
+  selectAll() {
+    this.pizzaToppings = this.pizzaToppings.map(x=> ({...x, checked: true}));
+    this.updateToppings();
+
+  }
   clearAll() {
-    this.pizzaToppings = this.pizzaToppings.map(x => ({ ...x, checked: false }));    
-    this.updateDisplayedToppings();
+    this.pizzaToppings = this.pizzaToppings.map(x => ({...x, checked: false}));    
+    this.updateToppings();
   }
 
   chosenTopping = "";
-  
-  updateDisplayedToppings() {
-    this.chosenTopping = this.pizzaToppings
-      .filter(x => x.checked)
-      .map(x => x.name)
-      .join(', ');
+
+  updateToppings() {
+    this.chosenTopping = this.pizzaToppings.filter(x => x.checked).map(x => x.name).join(', ');
   }
 
 }
