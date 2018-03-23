@@ -36,7 +36,7 @@ export class SkulasPizzaToppingComponent implements OnInit {
   }
 
   updateTopping = (pizzaTopping) => {
-    pizzaTopping.checked = true;
+    pizzaTopping.checked = !pizzaTopping.checked;
     this.describePizza();
   }
 
