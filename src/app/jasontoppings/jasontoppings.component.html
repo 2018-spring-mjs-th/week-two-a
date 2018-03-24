@@ -2,13 +2,11 @@
   <div class="card card-outline-primary">
     <div class='card-body'>
       <div class="card-header">Jason's Toppings</div>
-        <div *ngFor = 'let t of pizzaToppings' class="input-group mb-3">
-          <span class="input-group-addon">
-            <!-- try input-group-append -->
-              <input type="checkbox" [(ngModel)]='t.checked'>
-              {{ t.name }}
-          </span>  
-        </div>
+      <div *ngFor = 'let t of pizzaToppings' class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox"  [(ngModel)]='t.checked' class="form-check-input" value=""> {{ t.name }}
+        </label>
+      </div>
         <div class="btn-group btn-group-med" role="group" aria-label="Basic Example">
           <button class="btn btn-outline-dark" type="button" (click)="checkAllToppings()">All</button>
           <button class="btn btn-outline-dark" type="button" (click)="removeAllToppings()">None</button>
@@ -18,10 +16,10 @@
         <p class="card-text">{{ pizzaDescription }}</p>
     </div>
   </div>
- 
-     
-      <!-- <label>
-        {{ t.name }}
-        <input type="checkbox" (click)="addToPrice()"[(ngModel)]='t.checked'>
-        {{t.cost}} 
-      </label> -->
+
+  <!-- <div *ngFor = 'let t of pizzaToppings' class="input-group mb-3">
+  <span class="input-group-addon">
+    <input type="checkbox" [(ngModel)]='t.checked'>
+    {{ t.name }}
+</span>  
+</div> -->

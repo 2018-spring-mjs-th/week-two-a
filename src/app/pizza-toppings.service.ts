@@ -27,7 +27,6 @@ export class PizzaToppingsService {
       , "Mushroom"
       , "Kalamata Olives"
       , "Spinach"
-      , "Onions"
       , "The Works"
       , "Artichoke"
     ];
