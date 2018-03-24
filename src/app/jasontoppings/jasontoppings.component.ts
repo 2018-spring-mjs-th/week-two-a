@@ -7,12 +7,6 @@ interface jmPizzaTopping {
   cost: number;
 }
 
-// interface jmPizzaTopping {
-//   name: String;
-//   checked: boolean;
-//   cost:number;
-// }
-
 @Component({
   selector: 'jasontoppings',
   templateUrl: './jasontoppings.component.html',
@@ -26,51 +20,44 @@ export class JasontoppingsComponent implements OnInit {
   public toppingsPrice: number;
   constructor(private pizzaService: PizzaToppingsService) { }
 
-  ngOnInit() { //.sort()
-    this.pizzaToppings = this.pizzaService.getAvailablePizzaToppings()
+  ngOnInit() { 
+    this.pizzaToppings = this.pizzaService.getAvailablePizzaToppings().sort().reverse()
         .map(x =>({name: x, checked: false, cost: .50 }));
     this.pizzaDescription = "";
     this.price = 0
   }
 
-  // ngOnInit() {
-  //   this.pizzaToppings = this.pizzaService.getAvailablePizzaToppings()
-  //       .map(x =>({name: x, checked: false, cost: 0}));
-  //   this.pizzaDescription = "";
-  //   this.price = 10
-  // }
-public checkAllToppings() {
-  this.pizzaToppings.forEach(x => x.checked = true);
-}
+  public checkAllToppings() {
+    this.pizzaToppings.forEach(x => x.checked = true);
+  }
 
-public removeAllToppings() {
-  this.pizzaToppings.forEach(x => x.checked = false);
-}
+  public removeAllToppings() {
+    this.pizzaToppings.forEach(x => x.checked = false);
+  }
 
-public updateToppings() {
-  let toppingsPrice = 0;
-  let numberOfSelectedTopping = this.pizzaToppings.filter(x=>x.checked ==true)
-  this.price = 10
+  public updateToppings() {
+    let toppingsPrice = 0;
+    let numberOfSelectedTopping = this.pizzaToppings.filter(x=>x.checked ==true)
+    this.price = 10
 
-  if(numberOfSelectedTopping.length === 0) 
-    {
-    this.pizzaDescription = "You have a plain pizza."
-    }
-  else  {
-  //console.log(this.price);
-    
-    this.pizzaDescription = "My pizza has ";
-    this.pizzaDescription += this.pizzaToppings
-            .filter(x => x.checked)
-            .map(x => x.name)
-            .join(', ');
-   this.price = this.pizzaToppings.filter(x => x.checked).reduce(function(sum, each) { return sum + each.cost;},this.price)
+    if(numberOfSelectedTopping.length === 0) 
+      {
+      this.pizzaDescription = "You have a plain pizza."
+      }
+    else  {
+    //console.log(this.price);
+      
+      this.pizzaDescription = "My pizza has ";
+      this.pizzaDescription += this.pizzaToppings
+              .filter(x => x.checked)
+              .map(x => x.name)
+              .join(', ');
+    this.price = this.pizzaToppings.filter(x => x.checked).reduce(function(sum, each) { return sum + each.cost;},this.price)
 
-    }
+      }
 
-  this.pizzaDescription += " \nIt will cost $" + this.price;
+    this.pizzaDescription += " \nIt will cost $" + this.price;
 
-// public addToPrice() {
+  }
 
-// }
 }
