@@ -4,6 +4,7 @@ import { PizzaToppingsService} from "../pizza-toppings.service";
 interface jmPizzaTopping {
   name: String;
   checked: boolean;
+  cost: number;
 }
 
 // interface jmPizzaTopping {
@@ -22,13 +23,14 @@ export class JasontoppingsComponent implements OnInit {
   public pizzaToppings: jmPizzaTopping [];
   public pizzaDescription: string;
   public price: number;
+  public toppingsPrice: number;
   constructor(private pizzaService: PizzaToppingsService) { }
 
-  ngOnInit() {
+  ngOnInit() { //.sort()
     this.pizzaToppings = this.pizzaService.getAvailablePizzaToppings()
-        .map(x =>({name: x, checked: false}));
+        .map(x =>({name: x, checked: false, cost: .50 }));
     this.pizzaDescription = "";
-    this.price = 10
+    this.price = 0
   }
 
   // ngOnInit() {
@@ -46,26 +48,29 @@ public removeAllToppings() {
 }
 
 public updateToppings() {
+  let toppingsPrice = 0;
   let numberOfSelectedTopping = this.pizzaToppings.filter(x=>x.checked ==true)
+  this.price = 10
 
-  if(numberOfSelectedTopping.length === 0) {
+  if(numberOfSelectedTopping.length === 0) 
+    {
     this.pizzaDescription = "You have a plain pizza."
-  }
-  else {
-  
-  this.pizzaDescription = "My pizza has ";
-  this.pizzaDescription += this.pizzaToppings
-          .filter(x => x.checked)
-          .map(x => x.name)
-          .join(', ');
-  
-  }
-  this.pizzaDescription += " \nIt will cost $" + this.price;
-}
+    }
+  else  {
+  //console.log(this.price);
+    
+    this.pizzaDescription = "My pizza has ";
+    this.pizzaDescription += this.pizzaToppings
+            .filter(x => x.checked)
+            .map(x => x.name)
+            .join(', ');
+   this.price = this.pizzaToppings.filter(x => x.checked).reduce(function(sum, each) { return sum + each.cost;},this.price)
 
+    }
+
+  this.pizzaDescription += " \nIt will cost $" + this.price;
 
 // public addToPrice() {
 
 // }
 }
-
