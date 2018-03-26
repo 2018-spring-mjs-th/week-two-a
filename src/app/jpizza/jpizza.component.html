@@ -1,13 +1,24 @@
-<h3>Joe's Pizza Joint</h3>
 
-
-<label *ngFor="let pt of toppings">
+<div class="card">
+    <div class="card-header red">
+<h1 class="text-center">Joe's Palacial Pizza Paladium</h1>
+    </div>
+<div class="card-body off-white">
+<div class="flex-wrap">
+<label *ngFor="let pt of toppings" class="mr-2">
  <input type="checkbox" [(ngModel)] = 'pt.checked'/> {{pt.name}}
-</label><br>
-<br>
+</label>
+</div>
+
 <button class='btn btn-primary' (click)='checkAll()'>Glutton</button>
 <button class='btn btn-warning' (click)='unCheckToppings()'>Clear Order</button>
 <button class='btn btn-success' (click)='orderPie()'>Order</button>
 
+<div class="green py-2 pt-1">
 <p>{{pieOrder}}</p>
+</div>
+</div>
+</div>
+
+
 

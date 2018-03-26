@@ -14,28 +14,30 @@ export class JpizzaComponent implements OnInit {
   public pieOrder = '';
 
   ngOnInit() {
-    this.unCheckToppings();
-  }
-
-  unCheckToppings() {
     this.toppings = this.ts.getAvailablePizzaToppings()
       .map(x => ({ name: x, checked: false }));
   }
 
-  checkAll() {
-    this.toppings = this.ts.getAvailablePizzaToppings()
-      .map(x => ({ name: x, checked: true }));
+  unCheckToppings() {
+    this.toppings.forEach(topping => topping.checked = false);
   }
 
+  checkAll() {
+    this.toppings.forEach(topping => topping.checked = true);
+  }
+  
   orderPie() {
-    let selected = this.toppings.filter(x => x.checked == true);
 
-    if (selected.length > 0) {
-      this.pieOrder = "You ordered: ";
-      selected.forEach(x => this.pieOrder += x.name + ', ');
-      this.pieOrder = this.pieOrder.slice(0, -2) + "!";
+    this.pieOrder = '';
+    let selected = this.toppings.filter(x => x.checked);
+
+    if (selected.length == 0) {
+         this.pieOrder = 'No Selection Made. Try Again';
     } else {
-      this.pieOrder = '';
+      this.pieOrder = 'You ordered: ';
+      selected.forEach(x => this.pieOrder += x.name + ', ');
+      this.pieOrder = this.pieOrder.slice(0, -2) + '!';
+      this.unCheckToppings();
     }
   }
 
