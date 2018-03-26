@@ -12,6 +12,7 @@ import { JpbongPizzaToppingsComponent } from './jpbong-pizza-toppings.component'
 import { QuestionTypesService} from './question-types.service';
 import { JasontoppingsComponent } from './jasontoppings/jasontoppings.component'
 import { PizzaToppingsService } from './pizza-toppings.service';
+import { EShaPizzaToppingsComponent } from './e-sha-pizza-toppings/e-sha-pizza-toppings.component';
 import { JpizzaComponent } from './jpizza/jpizza.component';
 import { BciancioPizzaToppingsComponent } from './bciancio-pizza-toppings/bciancio-pizza-toppings.component';
 import { DebertPizzaToppingsComponent} from './debert-pizza-toppings/debert-pizza-toppings.component'
@@ -25,15 +26,17 @@ import { AknappPizzaToppingsComponent } from './aknapp-pizza-toppings/aknapp-piz
 import { RgrittnerPizzaToppingsComponent } from './rgrittner-pizza-toppings/rgrittner-pizza-toppings.component';
 import { JStoffComponentComponent } from './j-stoff-component/j-stoff-component.component';
 import { PizzaToppingsComponent } from './pizza-toppings/pizza-toppings.component';
+import { HniesenPizzaToppingsComponent } from './hniesen-pizza-toppings-types/hniesen-pizza-toppings.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooComponent
-    ,JasontoppingsComponent
-    ,AppComponent,
     QuestionTypesComponent,
+    EShaPizzaToppingsComponent,
+    FooComponent,
+    JasontoppingsComponent,
+    AppComponent,
     JpbongPizzaToppingsComponent,
     JpizzaComponent,
     PizzaToppingsComponent,
@@ -48,7 +51,8 @@ import { PizzaToppingsComponent } from './pizza-toppings/pizza-toppings.componen
     AknappPizzaToppingsComponent,
     RgrittnerPizzaToppingsComponent,
     JStoffComponentComponent,
-    PizzaToppingsComponent
+    PizzaToppingsComponent,
+    HniesenPizzaToppingsComponent
   ],
   imports: [
     BrowserModule
