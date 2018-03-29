@@ -20,6 +20,7 @@ export class HniesenPizzaToppingsComponent implements OnInit {
 
     ngOnInit() {
         this.toppingTypes = this.ptSvc.getAvailablePizzaToppings()
+            .sort()
             .map(x => ({ name: x, checked: false }));
     }
 

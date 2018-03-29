@@ -1,3 +1,4 @@
+<div class="border-left border-secondary">
 <h2>Holli's Pizza</h2>
 
 <span *ngFor='let pizzaTopping of toppingTypes'>
@@ -5,6 +6,7 @@
         <input type="checkbox" [(ngModel)]='pizzaTopping.checked' />
         {{ pizzaTopping.name }}
     </label>
+    <br/>
 </span>
 
 <br /><br />
@@ -15,3 +17,4 @@
 <br /><br />
 <span *ngIf='myToppings.length > 0'>I love {{ myToppings }}!!</span>
 <span *ngIf='myToppings.length == 0'>No extra toppings.</span>
+</div>
