@@ -10,12 +10,12 @@ import { FormsModule } from '@angular/forms';
 import { FooComponent } from './foo/foo.component';
 import { JpbongPizzaToppingsComponent } from './jpbong-pizza-toppings.component';
 import { QuestionTypesService} from './question-types.service';
-import { JasontoppingsComponent } from './jasontoppings/jasontoppings.component'
+import { JasontoppingsComponent } from './jasontoppings/jasontoppings.component';
 import { PizzaToppingsService } from './pizza-toppings.service';
 import { EShaPizzaToppingsComponent } from './e-sha-pizza-toppings/e-sha-pizza-toppings.component';
 import { JpizzaComponent } from './jpizza/jpizza.component';
 import { BciancioPizzaToppingsComponent } from './bciancio-pizza-toppings/bciancio-pizza-toppings.component';
-import { DebertPizzaToppingsComponent} from './debert-pizza-toppings/debert-pizza-toppings.component'
+import { DebertPizzaToppingsComponent} from './debert-pizza-toppings/debert-pizza-toppings.component';
 import { DcasebeerPizzaToppingsComponent } from './dcasebeer-pizza-toppings/dcasebeer-pizza-toppings.component';
 import { LuiiigiisPizzaPalaceComponent } from './luiiigii-pizza-palace/luiiigii-pizza-toppings.component';
 import { ComponentEjutenComponent } from './component-ejuten/component-ejuten.component';
