@@ -13,7 +13,7 @@ export class SyangpizzaComponent implements OnInit {
   pizzaToppings = [];
 
   ngOnInit() {
-    this.pizzaToppings = this.ptservice.getAvailablePizzaToppings().map(x => ({ name: x, checked: false }));
+    this.pizzaToppings = this.ptservice.getAvailablePizzaToppings().sort().map(x => ({ name: x, checked: false }));
   }
 
   selectAll() {
