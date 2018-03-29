@@ -27,6 +27,7 @@ import { RgrittnerPizzaToppingsComponent } from './rgrittner-pizza-toppings/rgri
 import { JStoffComponentComponent } from './j-stoff-component/j-stoff-component.component';
 import { PizzaToppingsComponent } from './pizza-toppings/pizza-toppings.component';
 import { SyangpizzaComponent } from './syangpizza/syangpizza.component';
+import { HniesenPizzaToppingsComponent } from './hniesen-pizza-toppings-types/hniesen-pizza-toppings.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { SyangpizzaComponent } from './syangpizza/syangpizza.component';
     RgrittnerPizzaToppingsComponent,
     JStoffComponentComponent,
     PizzaToppingsComponent,
-    SyangpizzaComponent
+    SyangpizzaComponent,
+    HniesenPizzaToppingsComponent
   ],
   imports: [
     BrowserModule
