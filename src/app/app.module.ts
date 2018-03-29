@@ -26,11 +26,7 @@ import { AknappPizzaToppingsComponent } from './aknapp-pizza-toppings/aknapp-piz
 import { RgrittnerPizzaToppingsComponent } from './rgrittner-pizza-toppings/rgrittner-pizza-toppings.component';
 import { JStoffComponentComponent } from './j-stoff-component/j-stoff-component.component';
 import { PizzaToppingsComponent } from './pizza-toppings/pizza-toppings.component';
-<<<<<<< HEAD
 import { SyangpizzaComponent } from './syangpizza/syangpizza.component';
-=======
-import { HniesenPizzaToppingsComponent } from './hniesen-pizza-toppings-types/hniesen-pizza-toppings.component';
->>>>>>> master
 
 
 @NgModule({
@@ -57,11 +53,7 @@ import { HniesenPizzaToppingsComponent } from './hniesen-pizza-toppings-types/hn
     RgrittnerPizzaToppingsComponent,
     JStoffComponentComponent,
     PizzaToppingsComponent,
-<<<<<<< HEAD
     SyangpizzaComponent
-=======
-    HniesenPizzaToppingsComponent
->>>>>>> master
   ],
   imports: [
     BrowserModule
