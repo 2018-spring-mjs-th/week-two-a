@@ -1,24 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 import { PizzaToppingsService } from '../pizza-toppings.service';
 
 interface toppingType {
-  name: string;
-  checked: boolean;
+    name: string;
+    checked: boolean;
 }
 
 @Component({
-  selector: 'component-ejuten',
-  templateUrl: './component-ejuten.component.html',
-  styleUrls: ['./component-ejuten.component.css']
+    selector: 'app-hniesen-pizza-toppings',
+    templateUrl: './hniesen-pizza-toppings.component.html',
+    styleUrls: ['./hniesen-pizza-toppings.component.css']
 })
-export class ComponentEjutenComponent implements OnInit {
 
-  constructor(private ptSvc: PizzaToppingsService) { }
+export class HniesenPizzaToppingsComponent implements OnInit {
+
+    constructor(private ptSvc: PizzaToppingsService) { }
 
     public toppingTypes: toppingType[];
 
     ngOnInit() {
-        this.toppingTypes = this.ptSvc.getAvailablePizzaToppings().sort()
+        this.toppingTypes = this.ptSvc.getAvailablePizzaToppings()
             .map(x => ({ name: x, checked: false }));
     }
 

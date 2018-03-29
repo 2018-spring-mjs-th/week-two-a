@@ -44,7 +44,7 @@ export class RgrittnerPizzaToppingsComponent implements OnInit {
       .join(', ');
       console.log(this.listOfToppings);
 
-    //this.toppingType.push({topping:})  ;
+    
      
   }
 
