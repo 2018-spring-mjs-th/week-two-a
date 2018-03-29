@@ -24,13 +24,11 @@ export class AknappPizzaToppingsComponent implements OnInit {
   }
 
   public checkAll() {
-    this.toppingTypes = this.ptService.getAvailablePizzaToppings()
-    .map(x => ({ name: x, checked: true }));
+    this.toppingTypes = this.toppingTypes.map(x => ({ ...x, checked: true }));
   }
 
   public checkNone() {
-    this.toppingTypes = this.ptService.getAvailablePizzaToppings()
-    .map(x => ({ name: x, checked: false }));
+    this.toppingTypes = this.toppingTypes.map(x => ({ name: x.name, checked: false }));
     
   }
 
