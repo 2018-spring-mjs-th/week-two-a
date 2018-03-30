@@ -22,13 +22,13 @@ export class JpbongPizzaToppingsComponent implements OnInit {
     }
 
     public checkAll() {
-        this.toppingType = this.pizzaToppings.getAvailablePizzaToppings()
-        .map(x => ({topping: x, checked: true, summary: x}));
+        this.toppingType = this.toppingType
+        .map(x => ({topping: x.topping, checked: true, summary: x.summary}));
     }
 
     public uncheckAll() {
-        this.toppingType = this.pizzaToppings.getAvailablePizzaToppings()
-        .map(x => ({topping: x, checked: false, summary: ""}));
+        this.toppingType = this.toppingType
+        .map(x => ({topping: x.topping, checked: false, summary: ""}));
     }
 
     public listOfToppings: string;
