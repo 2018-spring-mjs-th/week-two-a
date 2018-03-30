@@ -6,7 +6,7 @@
       <div id="toppings">
         <span *ngFor='let topping of pizza_toppings'>
           <label>
-            <input type='checkbox' [(ngModel)]='topping.checked' />
+            <input type='checkbox' [(ngModel)]='topping.checked' (click)="upperize(topping)"/>
             {{topping.name}}
           </label><br />
         </span>

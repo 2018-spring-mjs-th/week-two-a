@@ -22,10 +22,11 @@ export class QliuPizzaToppingsComponent implements OnInit {
 
 
   ngOnInit() {
-    this.toppingTypes = this.ptSvc.getAvailablePizzaToppings()
-    .map(x => ({ name: x, checked: false }));
+    this.toppingTypes = this.ptSvc.getAvailablePizzaToppings().sort().map(x => ({ name: x, checked: false }));
+
 
   }
+
 
   public selectAll() {
     this.toppingTypes.forEach(x => x.checked = true);

@@ -24,13 +24,13 @@ export class DebertPizzaToppingsComponent implements OnInit {
   }
 
   selectAll() {
-    this.toppingTypes = this.pSvc.getAvailablePizzaToppings()
-      .map(x => ({ name: x, checked: true }));      
+    this.toppingTypes = this.toppingTypes
+      .map(x => ({ name: x.name, checked: true }));      
   }
 
   deselectAll() {
-    this.toppingTypes = this.pSvc.getAvailablePizzaToppings()
-      .map(x => ({ name: x, checked: false }));      
+    this.toppingTypes = this.toppingTypes
+      .map(x => ({ name: x.name, checked: false }));      
   }
 
   selectToppings() { 

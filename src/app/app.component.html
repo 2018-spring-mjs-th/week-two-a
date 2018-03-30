@@ -1,116 +1,133 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<!-- <div style="text-align:center">
-<h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul> -->
+<div class="container">
+  <div class="card">
+    <div class="card-header">Quizzes</div>
+    <div class="card-body">
+      <ul>
+        <li *ngFor="let q of quizzes">{{ q.name }}
+          <span *ngIf='q.questionTypeSummary.length > 0'>({{ q.questionTypeSummary }})</span>
+          <button *ngIf="q.showDelete" (click)="deleteQuiz(q)">Delete</button>
+        </li>
+      </ul>
 
-<h1>Quizzes123</h1>
+      <button (click)="addFunnyQuiz()">Add Funny Quiz</button>
+      <br />
+      <br />
+      <div>
+        <input [(ngModel)]="newQuizName" type="text" />
+        <question-types></question-types>
+        <button (click)="addQuiz()">Add</button>
+      </div>
 
-<ul>
-  <li *ngFor="let q of quizzes">{{ q.name }} <span *ngIf='q.questionTypeSummary.length > 0'>({{ q.questionTypeSummary }})</span> <button *ngIf="q.showDelete" (click)="deleteQuiz(q)">Delete</button></li>
-</ul>
-
-<button (click)="addFunnyQuiz()">Add Funny Quiz</button>
-<br />
-<br />
-<div>
-  <input [(ngModel)]="newQuizName" type="text" />
-  <question-types></question-types>
-  <button (click)="addQuiz()">Add</button>
-</div>
-<br />
-<br />
-<div>
-  <input type="text" [(ngModel)]="number1" />
-  +
-  <input type="text" [(ngModel)]="number2" />
-  <button (click)="add()">=</button>
-  {{answer}}
-</div>
-
-
-
-  <br />
-  <br />
-  {{ number2 }}
-
-
-<div>
-  <br>
-  <jasontoppings></jasontoppings>
-  <br>
-</div>
-<br><br>
-<app-jpizza></app-jpizza>
-
-<div>
-  <bciancio-pizza-toppings></bciancio-pizza-toppings>
-</div>
-
-<div><debert-pizza-toppings></debert-pizza-toppings></div>
-  <br />
-
-<div>
-  <br />
-  <br />
-  <div>
-    <dcasebeer-pizza-toppings></dcasebeer-pizza-toppings>
+    </div>
   </div>
-</div>
 
-<br />
-<br />
-<div>
-<luiiigii-pizza-palace></luiiigii-pizza-palace>
-</div>
-<div>
-<component-ejuten></component-ejuten>
-</div>
-<br><br>
-<div>
+  <br>
+
+  <div class="card">
+    <div class="card-header">Calculator</div>
+    <div class="card-body">
+      <input type="text" [(ngModel)]="number1" /> +
+      <input type="text" [(ngModel)]="number2" />
+      <button (click)="add()">=</button>
+      {{answer}}
+      <br /> {{ number2 }}
+    </div>
+  </div>
+
+  <br>
+
+  <div class="card">
+    <div class="card-header">#week-06-slack-n-tell</div>
+    <div class="card-body">
+      <app-foo></app-foo>
+    </div>
     
-    <app-qliu-pizza-toppings></app-qliu-pizza-toppings>
-</div><br /><br />
+    <div>
+      <app-syangpizza></app-syangpizza>   
+    </div>
+  
+    <div>
+    <div>
+
+      <e-sha-pizza-toppings></e-sha-pizza-toppings>
+
+    </div>
+    <div>
+      <br>
+      <jasontoppings></jasontoppings>
+      <br>
+    </div>
+    <br>
+    <br>
+    <app-jpizza></app-jpizza>
+
+    <div>
+      <bciancio-pizza-toppings></bciancio-pizza-toppings>
+    </div>
+
+    <div>
+      <debert-pizza-toppings></debert-pizza-toppings>
+    </div>
+    <br />
+
+    <div>
+      <br />
+      <br />
+      <div>
+        <dcasebeer-pizza-toppings></dcasebeer-pizza-toppings>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <div>
+      <luiiigii-pizza-palace></luiiigii-pizza-palace>
+    </div>
+    <div>
+      <component-ejuten></component-ejuten>
+    </div>
+    <br>
+    <br>
+    <div>
+
+      <app-qliu-pizza-toppings></app-qliu-pizza-toppings>
+    </div>
+    <br />
+    <br />
 
 
-<div>
-  <rbruinsma-toppings></rbruinsma-toppings>
-</div>
-<br />
-<br />
-<div>
-  <h4>skulas Pizza Toppings</h4>
-  <skulas-pizza-topping></skulas-pizza-topping>
-</div>
-<br />
-<br />
-<div>
-  <aknapp-pizza-toppings></aknapp-pizza-toppings>
-</div>
-<br /><br />
-<div>  
-  <rgrittner-pizza-toppings></rgrittner-pizza-toppings>
-</div>
-<div>
-  <app-j-stoff-component></app-j-stoff-component>
-</div>
-<div>
-  <pizza-toppings></pizza-toppings>
-</div>
-<div>
-  <jpbong-pizza-toppings></jpbong-pizza-toppings>
+    <div>
+      <app-hniesen-pizza-toppings></app-hniesen-pizza-toppings>
+    </div>
+
+    <div>
+      <rbruinsma-toppings></rbruinsma-toppings>
+    </div>
+    <br />
+    <br />
+    <div>
+      <h4>Scott&rsquo;s Pizza Toppings</h4>
+      <skulas-pizza-topping></skulas-pizza-topping>
+    </div>
+    <br />
+    <br />
+    <div>
+      <aknapp-pizza-toppings></aknapp-pizza-toppings>
+    </div>
+    <br />
+    <br />
+    <div>
+      <rgrittner-pizza-toppings></rgrittner-pizza-toppings>
+    </div>
+    <div>
+      <app-j-stoff-component></app-j-stoff-component>
+    </div>
+    <div>
+      <pizza-toppings></pizza-toppings>
+    </div>
+    <div>
+      <jpbong-pizza-toppings></jpbong-pizza-toppings>
+    </div>
+
+  </div>
 </div>

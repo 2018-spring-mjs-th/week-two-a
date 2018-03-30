@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-body bg-info text-white">
+    <h5 class="card-title">tsteele pizza toppings</h5>
+    <div *ngFor='let t of toppings'>
+      <label>
+        <input type="checkbox" [(ngModel)]='t.checked' /> {{t.name}}
+      </label>
+    </div>
+    <br />
+    <div>
+      <button (click)='clearAll()'>Clear All</button>
+      <button (click)='updateDisplayedToppings()'>Update Chosen Toppings</button>
+      <!-- Chosen 123 toppings: {{ chosenToppings }} -->
+    </div>
+  </div>
+</div>

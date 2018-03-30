@@ -19,17 +19,16 @@ export class PizzaToppingsComponent implements OnInit {
     public message = '';
   
     ngOnInit() {
-      this.uncheckAll();
+      this.pizzaToppings = this.pizzaService.getAvailablePizzaToppings()
+      .map(x => ({ name: x, checked: false }));
     }
   
     uncheckAll() {
-      this.pizzaToppings = this.pizzaService.getAvailablePizzaToppings()
-        .map(x => ({ name: x, checked: false }));
+      this.pizzaToppings = this.pizzaToppings.map(x => ({ name: x.name, checked: false }));
     }
   
     checkAll() {
-      this.pizzaToppings = this.pizzaService.getAvailablePizzaToppings()
-        .map(x => ({ name: x, checked: true }));
+      this.pizzaToppings = this.pizzaToppings.map(x => ({ name: x.name, checked: true }));
     }
   
     refresh() {

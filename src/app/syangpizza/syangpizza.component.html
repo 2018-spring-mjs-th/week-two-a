@@ -1,0 +1,16 @@
+<div style="background-color:lavender; padding: 2em; border-style: ridge;">
+  <h3>Syang's Pizza Toppings</h3>
+    <div *ngFor='let t of pizzaToppings'>
+    <label>
+      <input type="checkbox" [(ngModel)]='t.checked'/>{{t.name}}
+    </label>
+    </div>
+    <br />
+    <div>
+      <button class="btn btn-outline-primary" (click)='selectAll()'>Select All</button>
+      <button class="btn btn-outline-primary" (click)='clearAll()'>Clear All</button>
+      <button class="btn btn-outline-primary" (click)='updateToppings()'>Update</button>
+     {{ chosenTopping }} 
+</div>
+
+ 
