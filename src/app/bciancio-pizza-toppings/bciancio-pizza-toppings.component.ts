@@ -23,7 +23,12 @@ export class BciancioPizzaToppingsComponent implements OnInit {
 	// On init reference the pizza service and convert toppings to PizzaTopping object
 	ngOnInit() {
 		this.topping_options = this.pizza_service.getAvailablePizzaToppings()
-			.map(x => ({ name: x, checked: false }));
+			.map(x => ({ name: x, checked: false }))
+			.sort(function(a,b) {
+				var x = a.name.toLowerCase();
+				var y = b.name.toLowerCase();
+				return x < y ? -1 : x > y ? 1 : 0;
+			});
 	}
 
 	clearAllToppings() {
