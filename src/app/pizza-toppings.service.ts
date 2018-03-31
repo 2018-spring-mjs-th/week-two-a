@@ -22,8 +22,15 @@ export class PizzaToppingsService {
       , "Corn"
       , "Arugula"
       , "Sausage"
+<<<<<<< HEAD
+<<<<<<< HEAD
       , "Pepperoni"
       , "Pineapple because I'm going to hell"
+=======
+=======
+      , "Pepperoni"
+      , "Pineapple because I'm going to hell"
+>>>>>>> master
       , "Basil"
       , "Bacon"
       , "Pineapple"
@@ -39,6 +46,7 @@ export class PizzaToppingsService {
       , "Spinach"
       , "The Works"
       , "Artichoke"
+>>>>>>> master
     ];
   }
 }
